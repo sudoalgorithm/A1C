@@ -6,61 +6,184 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>A1C - Home</title>
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style-home.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="css/style-home.css">    
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="assets/mohap.png" alt="MOHAP Logo" id="logo-one">
-                    <img src="assets/bcibm.png" alt="BCIBM Logo" id="logo-two">
-                </div>
-                <div class="col-md-4"></div>    
-                <div class="col-md-4">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+        <div class="container is-fluid container-fluid-override">
+            <div class="wrapper">
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <img src="assets/images/bcibm.png" alt="MOHAP" id="logo-ibm">
+                        <img src="assets/images/mohap.png" alt="MOHAP" id="logo-mohap">
+                    </div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column has-text-centered">
+                        <i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
+                        <i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i>
+                        <i class="fa fa-question-circle-o fa-3x" aria-hidden="true"></i>
+                    </div>
+                </div>    
+            </div>    
+        </div>
+        <div class="container is-fluid container-fluid-override">
+            <div class="box box-override">
+                <div class="columns">
+                    <div class="column column-override has-text-centered">
+                        <a class="button btn-override">MOH</a>
+                    </div>
+                    <div class="column column-override has-text-centered">
+                        <a class="button btn-override">INSURANCE COMPANY</a>
+                    </div>
+                    <div class="column column-override has-text-centered">
+                        <a class="button btn-override">PHYSICIAN-PRIOR AUTHORIZATION</a>
+                    </div>
+                    <div class="column column-override has-text-centered">
+                        <a class="button btn-override">HOSPITAL FRONT OFFICE</a>
+                    </div>
+                    <div class="column column-override has-text-centered">
+                        <a class="button btn-override">CLAIMS TEAM</a>
+                    </div>
+                    <div class="column column-override has-text-centered">
+                        <a class="button btn-override">PATIENT</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid container-fluid-override">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid container-fluid-override">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        </button>
+        <br>
+        <div class="container is-fluid container-fluid-override">
+            <h1 style="margin-top:12px; margin-left:25px">HOSPITAL FRONT OFFICE</h1>
+        </div> 
+        <div class="container is-fluid container-fluid-override">
+            <div class="columns columns-override">
+                <div class="column">
+                    <div class="card">
+                            <header class="card-header">
+                                    <p class="card-header-title">
+                                      PATIENT RECORDS
+                                    </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Patient ID</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text" placeholder="Patient ID">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Age</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text" placeholder="Age">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Sex</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field is-narrow">
+                                                <div class="control">
+                                                    <div class="select is-fullwidth">
+                                                        <select>
+                                                            <option>Female</option>
+                                                            <option>Male</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Emirates ID</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text" placeholder="Emirates ID">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Insurance ID</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text" placeholder="Insurance ID">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Contact ID</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded">
+                                                    <input class="input" type="text" placeholder="Contact ID">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Visit Type</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field is-narrow">
+                                                <div class="control">
+                                                    <div class="select is-fullwidth">
+                                                        <select>
+                                                            <option>Inpatient</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                        <li class="active"><a href="#hospitalfrontoffice">HOSPITAL FRONT OFFICE</a></li>
-                        <li><a href="#insurancecompany">INSURANCE COMPANY</a></li>
-                        <li><a href="#physicianpriorauthorization">PHYSICIAN-PRIOR AUTHORIZATION</a></li>
-                        <li><a href="#patient">PATIENT</a></li>
-                        <li><a href="#claimsteam">CLAIMS TEAM</a></li>
-                        <li><a href="#claimsteam">MOH</a></li>
-                        </ul>
+                    <div class="column">
+                            <div class="card">
+                                    <header class="card-header">
+                                            <p class="card-header-title">
+                                            INSURANCE CARD INFROMATION
+                                            </p>
+                                    </header>
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <h5><strong>Patient Name</strong></h5>
+                                            <h5><strong>Insurance ID</strong></h5>
+                                            <h5><strong>Insurance ID Status</strong></h5>
+                                            <h5><strong>Eligibility Approval ID</strong></h5>
+                                            <h5><strong>Date</strong></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </div>
-        <div class="container-fluid">
-            <h2>HOSPITAL FRONT OFFICE</h2>
-            <div class="row">
-                <div class="col-md-6">
-
-                </div>
-                <div class="col-md-6">
-
-                </div>
-            </div>
-        </div>  
-    </body>
-</html>
+            </body>
+        </html>

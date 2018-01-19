@@ -1,22 +1,53 @@
+@font-face{
+    font-family: dubai-font;
+    src: url(../assets/fonts/DubaiW23-Regular.woff)
+}
+
 html, body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: dubai-font;
 }
 
 .container-fluid-override{
-    margin: 0px;
+    margin: 0px !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
     border: 0px !important;
 }
 
-#logo-one{
-    width: 30%;
-    height: 30%;
-    margin-right: 5px;
+#logo-ibm{
+    height: 20%;
+    margin-right: 8px;
 }
 
-#logo-two{
-    width: 20%;
+#logo-mohap{
     height: 20%;
-    margin-left: 5px;
+    margin-left: 8px;
+}
+
+.wrapper{
+    margin-top: 10px;
+}
+.box-override{
+    padding: 0px !important;
+}
+
+.column-override{
+    padding: 0px !important;
+}
+
+.columns-override{
+    margin: 10px;
+}
+
+.btn-override{
+    width: 100% !important;
+    background-color: #be9647;
+    color: #FFFFFF;
+    padding: 50px;
+    font-size: 20px;
+}
+
+h1{
+    font-size: 25px;
+    color: #be9647;
 }
