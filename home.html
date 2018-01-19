@@ -97,7 +97,7 @@
                                             <div class="field-body">
                                                 <div class="field">
                                                     <p class="control is-expanded">
-                                                        <input class="input" type="text" placeholder="Patient Name">
+                                                        <input class="input" type="text" value="Aisha Mohammed" placeholder="Patient Name" onclick="getSearch()">
                                                     </p>
                                                 </div>
                                             </div>
@@ -109,7 +109,7 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <p class="control is-expanded">
-                                                    <input class="input" type="text" placeholder="Age">
+                                                    <input class="input" type="text" value="44" placeholder="Age" onclick="getSearch()">
                                                 </p>
                                             </div>
                                         </div>
@@ -138,7 +138,7 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <p class="control is-expanded">
-                                                    <input class="input" type="text" placeholder="Emirates ID">
+                                                    <input class="input" type="text" value="1234567890123" placeholder="Emirates ID" onclick="getSearch()">
                                                 </p>
                                             </div>
                                         </div>
@@ -150,7 +150,7 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <p class="control is-expanded">
-                                                    <input class="input" type="text" placeholder="Insurance ID">
+                                                    <input class="input" type="text" placeholder="Insurance ID" onclick="getSearch()">
                                                 </p>
                                             </div>
                                         </div>
@@ -162,7 +162,7 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <p class="control is-expanded">
-                                                    <input class="input" type="number" placeholder="Contact Number">
+                                                    <input class="input" type="number" value="+971543651972" placeholder="Contact Number" onclick="getSearch()">
                                                 </p>
                                             </div>
                                         </div>
@@ -190,14 +190,14 @@
                                             <div class="field-body">
                                                 <div class="field">
                                                     <p class="control is-expanded">
-                                                        <input class="input" type="text" placeholder="Email">
+                                                        <input class="input" type="text" value="aishamohammed@test.com" placeholder="Email" onclick="getSearch()">
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                 </div>
                             </div>
-                            <a class="button is-info is-large button-override" style="float:right; margin-top:10px">Search</a>
+                            <button class="button is-info is-large button-override" style="float:right; margin-top:10px">Search</button>
                             
                         </div>
                     </div>
@@ -216,13 +216,15 @@
                                             <h5><strong>Eligibility Request ID</strong></h5>
                                         </div>
                                     </div>
-                                    <a class="button is-info is-large button-override" style="float:right; margin-top:10px">Send</a>
+                                    <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="sendContact()">Send</button>
                                 </div>
                                 <br>
                                 
                             </div>
                         </div>
                     </div>
-                </section>    
+                </section>
+                <script src="assets/js/bulma.js" type="text/javascript"></script>
+                <script src="assets/js/app.js" type="text/javascript"></script>
             </body>
         </html>
