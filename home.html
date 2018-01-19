@@ -231,9 +231,16 @@
                         var xhttp = new XMLHttpRequest();
                         xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
                         xhttp.setRequestHeader("Content-type","application/json");
+                        
                         xhttp.send(JSON.stringify({
-                            "class": "org.acme.health.OnboardPatientInsuranceCard",
+                            "$class": "org.acme.health.OnboardPatientInsuranceCard",
                             "card": {
+                                "$class": "org.acme.health.InsuranceCard",
+                                "insuranceRequestId": "card3",
+                                "patientInsuranceId": "123213",
+                                "patientFirstName": "Aisha",
+                                "patientLastName": "Mohammed",
+                                "date": "12/3/2"
                             },
                             "timestamp": "2018-01-19T14:14:17.304Z"
                             }));
