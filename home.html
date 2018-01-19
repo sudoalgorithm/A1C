@@ -245,8 +245,8 @@
                             })
                     }
                     function sendInsurance() {
-                        xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true                        var xhttp = new XMLHttpRequest();
-);
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
                         xhttp.setRequestHeader("Content-type","application/json");
                         xhttp.send();
                         var response = JSON.parse(xhttp.responseText);
