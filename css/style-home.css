@@ -57,5 +57,10 @@ h1{
 a{
     color: #9E9E9E;
     float: right;
-    margin-right: 10px;
+    margin-right: 1px;
+}
+
+.button-override{
+    background-color: #be9647 !important;
+    width: 20%;
 }
