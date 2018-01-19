@@ -1,0 +1,46 @@
+@font-face{
+    font-family: dubai-font;
+    src: url(../assets/fonts/DubaiW23-Regular.woff)
+}
+
+html,body {
+    font-family: dubai-font;
+    font-size: 14px;
+    font-weight: 300;
+
+  }
+  .hero.is-success {
+    background: #FFFFFF;
+  }
+  .hero .nav, .hero.is-success .nav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .box-outer{
+      background-color: #be9647;
+      padding: 1rem;
+      border-radius: 1rem;
+  }
+  .box{
+      padding: 5rem;
+  }
+  .button-override{
+      background-color: #be9647 !important;
+      border-radius: 1rem;
+  }
+  input {
+    font-weight: 300;
+    font-family: FontAwesome, dubai-font;
+  }
+  input[type=text]{
+    border-radius: 16px;
+  }
+  input[type=password]{
+      border-radius: 16px;
+  }
+  p {
+    font-weight: 700;
+  }
+  p.subtitle {
+    padding-top: 1rem;
+  }
