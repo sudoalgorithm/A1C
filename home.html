@@ -233,14 +233,20 @@
                         xhttp.setRequestHeader("Content-type","application/json");
                         xhttp.send({
                             "$class": "org.acme.health.OnboardPatientInsuranceCard",
-                            "card": {},
+                            "card": {
+                                "string1":"a",
+                                "string2":"b",
+                                "string3":"c",
+                                "string4":"d",
+                                "string5":"e"
+                            },
                             "transactionId": "Kunal Malhotra is doing the transcation",
                             "timestamp": "2018-01-19T14:14:17.304Z"
                             })
                     }
                     function sendInsurance() {
-                        var xhttp = new XMLHttpRequest();
-                        xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
+                        xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true                        var xhttp = new XMLHttpRequest();
+);
                         xhttp.setRequestHeader("Content-type","application/json");
                         xhttp.send();
                         var response = JSON.parse(xhttp.responseText);
