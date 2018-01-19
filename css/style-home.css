@@ -53,3 +53,9 @@ h1{
     font-size: 25px;
     color: #be9647;
 }
+
+a{
+    color: #9E9E9E;
+    float: right;
+    margin-right: 10px;
+}
