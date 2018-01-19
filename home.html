@@ -232,7 +232,7 @@
                         xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
                         xhttp.setRequestHeader("Content-type","application/json");
                         xhttp.send({
-                            "$class": "org.acme.health.OnboardPatientInsuranceCard",
+                            "class": "org.acme.health.OnboardPatientInsuranceCard",
                             "card": {
                                 "string1":"a",
                                 "string2":"b",
