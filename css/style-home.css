@@ -15,12 +15,14 @@ html, body{
 }
 
 #logo-ibm{
-    height: 20%;
+    height: 100%;
+    width: 25%;
     margin-right: 8px;
 }
 
 #logo-mohap{
-    height: 20%;
+    height: 100%;
+    width: 25%;
     margin-left: 8px;
 }
 
