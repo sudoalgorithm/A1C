@@ -212,7 +212,7 @@
                                         <h5>Eligibility Request ID</h5>
                                     </div>
                                 </div>
-                                <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="sendInsuranceCompany();onBoardPatientInsuranceCard();">Send</button>
+                                <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="sendInsuranceCompany();">Send</button>
                             </div>
                         <br>
                     </div>
@@ -247,6 +247,7 @@
                         "date": timeStampInMs
                     }
                 ));
+                onBoardPatientInsuranceCard();
             }
             function onBoardPatientInsuranceCard(){
                 var xhttp = new XMLHttpRequest();
