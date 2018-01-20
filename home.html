@@ -212,7 +212,7 @@
                                         <h5>Eligibility Request ID</h5>
                                     </div>
                                 </div>
-                                <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="sendInsuranceCompany()">Send</button>
+                                <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="sendInsuranceCompany(); onBoardPatientInsuranceCard();">Send</button>
                             </div>
                         <br>
                     </div>
@@ -234,10 +234,23 @@
             function sendInsuranceCompany(){
                 var xhttp = new XMLHttpRequest();
                 var insuranceRequestID = makeid();
-                console.log(insuranceRequestID)
                 var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
-                console.log(insuranceRequestID)
                 xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
+                xhttp.setRequestHeader("Content-type","application/json");
+                xhttp.send(JSON.stringify(
+                    {
+                        "$class": "org.acme.health.InsuranceCard",
+                        "insuranceRequestId": insuranceRequestID,
+                        "patientInsuranceId": "1357924680",
+                        "patientFirstName": "Aisha",
+                        "patientLastName": "Mohammed",
+                        "date": timeStampInMs
+                    }
+                ));
+            }
+            function onBoardPatientInsuranceCard(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("POST", "http://localhost:3000/api/OnBoardPatientInsuranceCard",true);
                 xhttp.setRequestHeader("Content-type","application/json");
                 xhttp.send(JSON.stringify(
                     {
