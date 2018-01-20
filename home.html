@@ -208,7 +208,7 @@
                                         <div class="content">
                                         <h5>Patient Name</h5>
                                         <h5>Insurance ID</h5>
-                                        <h5>Insurance ID Status</h5>
+                                        <h5>Insurance ID Status</h5> <span id="insuranceStatus"></span>
                                         <h5>Eligibility Request ID</h5>
                                     </div>
                                 </div>
@@ -252,6 +252,30 @@
                                 }
                             )); 
                         }
+
+                        function getInsuranceStatus(){
+                            var xhttp = new XMLHttpRequest();
+                            xhttp.open("GET", "http://localhost:3000/api/CoverageDetails", false);
+                            xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                var obj = JSON.parse(this.responseText);
+                                if(obj[0].isCovered === true){
+                                    document.getElementById("insuranceStatus").innerHTML = "Covered";
+                                }else{
+                                    document.getElementById("insuranceStatus").innerHTML = "Not Covered";
+                                }
+                                
+                            }
+                            
+                            };
+                            xhttp.send();
+                            }
+
+                        window.onload = function(){
+                            getInsuranceStatus();
+                        }
+
+                    
         </script>
     </body>
 </html>

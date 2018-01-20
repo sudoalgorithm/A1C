@@ -101,9 +101,9 @@
                                         <div class="content">
                                             <h5>Patient Name</h5>
                                             <h5>Insurance ID</h5>
-                                            <h5>Insurance ID Status</h5>
-                                            <h5>Insurance ID Response</h5>
-                                            <h5>Date</h5>
+                                            <h5>Insurance ID Status</h5><span id="insuranceStatus"></span>
+                                            <h5>Insurance ID Response</h5><span id="insuranceResponse"></span>
+                                            <h5>Date</h5><span id="date"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -229,7 +229,32 @@
                                         </div>
                                         </div>
                                     </section>
-        em<script src="assets/js/bulma.js" type="text/javascript"></script>
-        <script src="assets/js/app.js" type="text/javascript"></script>            
+        <script src="assets/js/bulma.js" type="text/javascript"></script>
+        <script src="assets/js/app.js" type="text/javascript"></script>
+        <script>
+            function getInsuranceStatus(){
+                            var xhttp = new XMLHttpRequest();
+                            xhttp.open("GET", "http://localhost:3000/api/CoverageDetails", false);
+                            xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                var obj = JSON.parse(this.responseText);
+                                if(obj[0].isCovered === true){
+                                    document.getElementById("insuranceStatus").innerHTML = "Covered";
+                                }else{
+                                    document.getElementById("insuranceStatus").innerHTML = "Not Covered";
+                                }
+                                document.getElementById("insuranceResponse").innerHTML = obj[0].insuranceResponseId;
+                                document.getElementById("date").innerHTML = obj[0].data;
+                                
+                            }
+                            
+                            };
+                            xhttp.send();
+                            }
+
+                        window.onload = function(){
+                            getInsuranceStatus();
+                        }
+        </script>            
     </body>
 </html>
