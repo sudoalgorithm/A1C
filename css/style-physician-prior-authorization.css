@@ -66,5 +66,5 @@ a{
 }
 
 .focus:focus {
-    color: red;
+    color: black;
 }
