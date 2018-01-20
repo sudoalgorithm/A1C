@@ -225,34 +225,11 @@
                                         <button class="button is-info is-large button-override" style="float:right; margin-top:10px">Send</button>
                                         </div>
                                         </div>
-					<div class="column"></div>
+					                        <div class="column"></div>
                                         </div>
                                         </div>
                                     </section>
-                                    <script src="assets/js/bulma.js" type="text/javascript"></script>
-                                    <script src="assets/js/app.js" type="text/javascript"></script>
-                                    <script>
-                                        function sendInsuranceCompany(){
-                                            var xhttp = new XMLHttpRequest();
-                                            xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
-                                            xhttp.setRequestHeader("Content-type","application/json");
-                                            xhttp.send(JSON.stringify({
-                                                "$class": "org.acme.health.InsuranceCard",
-                                                "insuranceRequestId": "123456789",
-                                                "patientInsuranceId": "987654321",
-                                                "patientFirstName": "Kunal",
-                                                "patientLastName": "Malhotra",
-                                                "date": "12/02/15"
-                                                }));
-                                            }
-                                        function sendInsurance() {
-                                            var xhttp = new XMLHttpRequest();
-                                            xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
-                                            xhttp.setRequestHeader("Content-type","application/json");
-                                            xhttp.send();
-                                            var response = JSON.parse(xhttp.responseText);
-
-                                        }
-                                    </script>
-            </body>
-        </html>
+        <script src="assets/js/bulma.js" type="text/javascript"></script>
+        <script src="assets/js/app.js" type="text/javascript"></script>            
+    </body>
+</html>
