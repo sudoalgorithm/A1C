@@ -126,13 +126,14 @@
                                         <div class="card-content">
                                                 <div class="content">
                                                     <h3><strong style="color:#757575">Request Information</strong></h3>
-                                                    <h5>Hospital ID</h5>
-                                                    <h5>Hospital Name</h5>
-                                                    <h5>Physician ID</h5>
-                                                    <h5>Clinical Request ID</h5>
-                                                    <h5>Diagnosis Code</h5>
-                                                    <h5>Diagnosis Description</h5>
-                                                    <h5>Length Of Stay</h5>
+                                                    <h5>Hospital ID</h5><span id="hospitalid"></span>
+                                                    <h5>Hospital Name</h5><span id="hospitalname"></span>
+                                                    <h5>Physician Name</h5><span id="physicianname"></span>
+                                                    <h5>Clinical Request ID</h5><span id="clinicalrequestdD"></span>
+                                                    <h5>Date Of Admission</h5><span id="dateofadmission"></span>
+                                                    <h5>Diagnosis Code</h5><span id="diagnosiscode"></span>
+                                                    <h5>Diagnosis Description</h5><span id="diagnosisdescription"></span>
+                                                    <h5>Length Of Stay</h5><span id="lengthofstay"></span>
                                                     <h3><strong style="color:#757575">Response Information</strong></h3>
                                                     <h5>Clinical Response ID</h5>
                                                     <h5>Clinical Resquest Status</h5>
@@ -223,6 +224,7 @@
         <script>
             window.onload = function(){
                 getInsuranceCardInfromation();
+                getClinicalInformation();
             }
             function sendClaimsInfromation(){
                 var xhttp = new XMLHttpRequest();
@@ -249,13 +251,32 @@
                         document.getElementById("patientname").innerHTML = obj.patientFirstName+" "+obj.patientLastName;
                         document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
                         if(obj[0].isCovered === true){
-                            document.getElementById("insuranceidstatus").innerHTML = "Covered"
+                            document.getElementById("insuranceidstatus").innerHTML = "Covered";
                         }else{
-                            document.getElementById("insuranceidstatus").innerHTML = "UnCovered"
+                            document.getElementById("insuranceidstatus").innerHTML = "UnCovered";
                         }
                         
                         document.getElementById("insuranceresponseid").innerHTML = "coverage";
                         document.getElementById("date").innerHTML = obj.date;
+                    }
+                };
+                xhttp.send();
+            }
+            function getClinicalInformation(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET","http://localhost:3000/api/ClaimsInformation/claims", false);
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                        document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                        document.getElementById("physicianname").innerHTML = "clinical";
+                        document.getElementById("clinicalrequestdD").innerHTML = "";
+                        document.getElementById("dateofadmission").innerHTML = obj.dateOfAdmission;
+                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                        document.getElementById("diagnosisdescription").innerHTML = obj.diagnosisDescription;
+                        document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+
                     }
                 };
                 xhttp.send();
