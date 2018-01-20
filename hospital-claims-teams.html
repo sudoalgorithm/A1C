@@ -135,8 +135,8 @@
                                                     <h5>Diagnosis Description</h5><span id="diagnosisdescription"></span>
                                                     <h5>Length Of Stay</h5><span id="lengthofstay"></span>
                                                     <h3><strong style="color:#757575">Response Information</strong></h3>
-                                                    <h5>Clinical Response ID</h5>
-                                                    <h5>Clinical Resquest Status</h5>
+                                                    <h5>Clinical Response ID</h5><span id="clinicalresponseid"></span>
+                                                    <h5>Clinical Resquest Status</h5><span id="clinicalrequeststatus"></span>
                                                 </div>
                                          </div>
                                         </div>
@@ -264,7 +264,7 @@
             }
             function getClinicalInformation(){
                 var xhttp = new XMLHttpRequest();
-                xhttp.open("GET","http://localhost:3000/api/ClaimsInformation/claims", false);
+                xhttp.open("GET","http://localhost:3000/api/ClinicalAsset/clinical", false);
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         var obj = JSON.parse(this.responseText);
@@ -276,6 +276,25 @@
                         document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
                         document.getElementById("diagnosisdescription").innerHTML = obj.diagnosisDescription;
                         document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+
+                    }
+                };
+                xhttp.send();
+            }
+
+            function getResponseInformation(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET","http://localhost:3000/api/ClinicalAssetResponse/response", false);
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("clinicalresponseid").innerHTML = "response";
+                        if(obj.isApproved === true){
+                            document.getElementById("clinicalrequeststatus").innerHTML = "Approved";
+                        }else{
+                            document.getElementById("clinicalrequeststatus").innerHTML = "Not Approved";
+                        }
+                        
 
                     }
                 };
