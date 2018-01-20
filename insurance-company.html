@@ -99,8 +99,8 @@
                                     </header>
                                     <div class="card-content">
                                         <div class="content">
-                                            <h5>Patient Name</h5>
-                                            <h5>Insurance ID</h5>
+                                            <h5>Patient Name:</h5><span id="name"></span>
+                                            <h5>Insurance ID</h5><span id="insuranceid"></span>
                                             <div class="field is-horizontal">
                                                     <div class="field-label is-normal">
                                                         <label class="label">Insurance ID Status</label>
@@ -282,6 +282,10 @@
                 xhttp.send(null)
                 return xhttp.responseText;
             }
+
+            var obj = JSON.parse(getData());
+            document.getElementById(name).innerHTML = obj.patientFirstName+" "+obj.patientLastName;
+            document.getElementById(name).innerHTML = obj.patientInsuranceId;
         </script>   
     </body>
 </html>
