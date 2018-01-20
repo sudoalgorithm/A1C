@@ -212,24 +212,16 @@
                                         <h5>Eligibility Request ID</h5>
                                     </div>
                                 </div>
-                                <button id="send" class="button is-info is- large button-override" style="float:right; margin-top:10p">Send</button>
+                                <button class="button is-info is- large button-override" style="float:right; margin-top:10p" onclick="onBoardPatientInsuranceCard();">Send</button>
                             </div>
                         <br>
                     </div>
                 </div>
             </div>
         </section>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="assets/js/bulma.js" type="text/javascript"></script>
         <script src="assets/js/app.js" type="text/javascript"></script>
         <script>
-
-
-                        $('#send').on('click', function () {
-                            sendInsuranceCompany();
-                            onBoardPatientInsuranceCard();
-                        });
-            
                         function makeid() {
                             var text = "";
                             var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -239,25 +231,10 @@
                             console.log(text)
                             return text;
                         }
-                        var insuranceRequestID = makeid();
-                        function sendInsuranceCompany(){
-                            var xhttp = new XMLHttpRequest();
-                            var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
-                            xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
-                            xhttp.setRequestHeader("Content-type","application/json");
-                            xhttp.send(JSON.stringify(
-                                {
-                                    "$class": "org.acme.health.InsuranceCard",
-                                    "insuranceRequestId": insuranceRequestID,
-                                    "patientInsuranceId": "1357924680",
-                                    "patientFirstName": "Aisha",
-                                    "patientLastName": "Mohammed",
-                                    "date": timeStampInMs
-                                }
-                            ));
-                        }
+                        
                         function onBoardPatientInsuranceCard(){
                             var xhttp = new XMLHttpRequest();
+                            var patientInsuranceId = makeid();
                             var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
                             xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
                             xhttp.setRequestHeader("Content-type","application/json");
@@ -266,8 +243,8 @@
                                     "$class": "org.acme.health.OnboardPatientInsuranceCard",
                                      "card":{
                                         "$class": "org.acme.health.InsuranceCard",
-                                        "insuranceRequestId": insuranceRequestID,
-                                        "patientInsuranceId": "1357924680",
+                                        "insuranceRequestId": "card",
+                                        "patientInsuranceId": patientInsuranceId,
                                         "patientFirstName": "Aisha",
                                         "patientLastName": "Mohammed",
                                         "date": timeStampInMs
