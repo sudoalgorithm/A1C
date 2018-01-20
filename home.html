@@ -248,7 +248,7 @@
                             xhttp.send(JSON.stringify(
                                 {
                                     "$class": "org.acme.health.InsuranceCard",
-                                    "insuranceRequestId": "1234",
+                                    "insuranceRequestId": insuranceRequestID,
                                     "patientInsuranceId": "1357924680",
                                     "patientFirstName": "Aisha",
                                     "patientLastName": "Mohammed",
@@ -266,8 +266,7 @@
                                     "$class": "org.acme.health.OnboardPatientInsuranceCard",
                                      "card":{
                                         "$class": "org.acme.health.InsuranceCard",
-                                        "insuranceRequestId": "1234",
-                                        "insuranceRequestTransactionId": insuranceRequestID,
+                                        "insuranceRequestId": insuranceRequestID,
                                         "patientInsuranceId": "1357924680",
                                         "patientFirstName": "Aisha",
                                         "patientLastName": "Mohammed",
