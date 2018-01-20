@@ -223,6 +223,8 @@
         <script src="assets/js/bulma.js" type="text/javascript"></script>
         <script src="assets/js/app.js" type="text/javascript"></script>
         <script>
+
+
                         $('#send').on('click', function () {
                             sendInsuranceCompany();
                             onBoardPatientInsuranceCard();
@@ -237,9 +239,10 @@
                             console.log(text)
                             return text;
                         }
+                        var insuranceRequestID = makeid();
                         function sendInsuranceCompany(){
+                            console.log(insuranceRequestID)
                             var xhttp = new XMLHttpRequest();
-                            var insuranceRequestID = makeid();
                             var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
                             xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
                             xhttp.setRequestHeader("Content-type","application/json");
@@ -255,8 +258,8 @@
                             ));
                         }
                         function onBoardPatientInsuranceCard(){
+                            console.log(insuranceRequestID)
                             var xhttp = new XMLHttpRequest();
-                            var insuranceRequestID = makeid();
                             var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
                             xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
                             xhttp.setRequestHeader("Content-type","application/json");
