@@ -196,13 +196,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="sendInsurance()">Search</button>          
+                            <button class="button is-info is-large button-override" style="float:right; margin-top:10px">Search</button>          
                         </div>
                     </div>
                     <div class="column">
                             <div class="card">
                                     <header class="card-header">
-                                        <p class="card-header-title">INSURANCE CARD INFROMATION</p>
+                                        <p class="card-header-title">INSURANCE CARD INFORMATION</p>
                                     </header>
                                     <div class="card-content">
                                         <div class="content">
@@ -222,19 +222,31 @@
         <script src="assets/js/bulma.js" type="text/javascript"></script>
         <script src="assets/js/app.js" type="text/javascript"></script>
         <script>
+            function makeid() {
+                var text = "";
+                var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                for (var i = 0; i < 5; i++)
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+                return text;
+            }
             function sendInsuranceCompany(){
                 var xhttp = new XMLHttpRequest();
+                var insuranceRequestID = makeid();
+                var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
                 xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
                 xhttp.setRequestHeader("Content-type","application/json");
-                xhttp.send(JSON.stringify());
-            }
-            function sendInsurance() {
-                var xhttp = new XMLHttpRequest();
-                xhttp.open("GET", "http://localhost:3000/api/InsuranceCard", true);
-                xhttp.setRequestHeader("Content-type","application/json");
-                xhttp.send();
-                var response = JSON.parse(xhttp.responseText);
-
+                xhttp.send(JSON.stringify(
+                    {
+                        "$class": "org.acme.health.InsuranceCard",
+                        "insuranceRequestId": insuranceRequestID.toString,
+                        "patientInsuranceId": "1357924680",
+                        "patientFirstName": "Aisha",
+                        "patientLastName": "Mohammed",
+                        "date": timeStampInMs.toString
+                    }
+                ));
             }
         </script>
     </body>
