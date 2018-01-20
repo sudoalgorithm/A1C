@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>A1C - Hospital Claims Team</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="css/style-hospital-claims-teams.css">    
+    </head>
+    <body>
+        <br>
+        <section>
+            <div class="container is-fluid container-fluid-override">
+                <div class="columns is-gapless">
+                    <div class="column">
+                        <img src="assets/images/bcibm.png" alt="MOHAP" id="logo-ibm">
+                        <img src="assets/images/mohap.png" alt="MOHAP" id="logo-mohap">
+                    </div>    
+                    <div class="column">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="" target="_blank"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
+                        <a href="" target="_blank"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></a>
+                        <a href="" target="_blank"><i class="fa fa-question-circle-o fa-3x" aria-hidden="true"></i></a>
+                    </div>
+                </div>      
+            </div>
+        </section>
+        <br>
+        <section>
+            <div class="container is-fluid container-fluid-override">
+                <div class="box box-override">
+                    <div class="columns">
+                        <div class="column column-override has-text-centered">
+                            <a class="button btn-override focus">MOH</a>
+                        </div>
+                        <div class="column column-override has-text-centered">
+                            <a class="button btn-override focus">HOSPITAL FRONT OFFICE</a>  
+                        </div>
+                        <div class="column column-override has-text-centered">
+                            <a class="button btn-override focus">PRIOR AUTHORIZATION</a>
+                        </div>
+                        <div class="column column-override has-text-centered">
+                            <a class="button btn-override focus">INSURANCE COMPANY</a>
+                        </div>
+                        <div class="column column-override has-text-centered">
+                            <a class="button btn-override">HOSPITAL CLAIMS TEAM</a>
+                        </div>
+                        <div class="column column-override has-text-linkin park meteora full albumcentered">
+                            <a class="button btn-override">PATIENT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section>
+            <div class="container is-fluid container-fluid-override">
+                <h1 style="margin-top:12px; margin-left:25px">PATIENT</h1>
+            </div> 
+        </section>
+        <section>
+        <div class="container is-fluid container-fluid-override">
+            <div class="columns columns-override">
+                <div class="column">
+                    <div class="card">
+                            <header class="card-header">
+                                    <p class="card-header-title">
+                                      PATIENT RECORDS
+                                    </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h5>Patient ID</h5>
+                                    <h5>Patient Name</h5>
+                                    <h5>Age</h5>
+                                    <h5>Sex</h5>
+                                    <h5>Emirates ID</h5>
+                                    <h5>Insurance ID</h5>
+                                    <h5>Contact Number</h5>
+                                    <h5>Visit Type</h5>
+                                    <h5>Email</h5> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                            <div class="card">
+                                    <header class="card-header">
+                                            <p class="card-header-title">
+                                            APPROVALS INFORMATION
+                                            </p>
+                                    </header>
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <h5>Insurance Approval</h5>
+                                            <h5>Requested Treatment Ammount</h5>
+                                            <h5>Final Ammount</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                                      <script src="assets/js/bulma.js" type="text/javascript"></script>
+                                    <script src="assets/js/app.js" type="text/javascript"></script>
+                                    <script>
+                                        function sendInsuranceCompany(){
+                                            var xhttp = new XMLHttpRequest();
+                                            xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
+                                            xhttp.setRequestHeader("Content-type","application/json");
+                                            xhttp.send(JSON.stringify({
+                                                "$class": "org.acme.health.InsuranceCard",
+                                                "insuranceRequestId": "123456789",
+                                                "patientInsuranceId": "987654321",
+                                                "patientFirstName": "Kunal",
+                                                "patientLastName": "Malhotra",
+                                                "date": "12/02/15"
+                                                }));
+                                            }
+                                        function sendInsurance() {
+                                            var xhttp = new XMLHttpRequest();
+                                            xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
+                                            xhttp.setRequestHeader("Content-type","application/json");
+                                            xhttp.send();
+                                            var response = JSON.parse(xhttp.responseText);
+
+                                        }
+                                    </script>
+            </body>
+        </html>

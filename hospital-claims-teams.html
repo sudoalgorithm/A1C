@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>A1C - Insurance Company</title>
+        <title>A1C - Hospital Claims Team</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
-        <link rel="stylesheet" type="text/css" href="css/style-insurance-company.css">    
+        <link rel="stylesheet" type="text/css" href="css/style-hospital-claims-teams.css">    
     </head>
     <body>
         <br>
@@ -52,7 +52,7 @@
                         <div class="column column-override has-text-centered">
                             <a class="button btn-override">HOSPITAL CLAIMS TEAM</a>
                         </div>
-                        <div class="column column-override has-text-centered">
+                        <div class="column column-override has-text-linkin park meteora full albumcentered">
                             <a class="button btn-override">PATIENT</a>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
         <br>
         <section>
             <div class="container is-fluid container-fluid-override">
-                <h1 style="margin-top:12px; margin-left:25px">INSURANCE COMPANY</h1>
+                <h1 style="margin-top:12px; margin-left:25px">HOSPITAL CLAIMS TEAM</h1>
             </div> 
         </section>
         <section>
@@ -88,6 +88,8 @@
                                     <h5>Email</h5> 
                                 </div>
                             </div>
+                            <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="sendInsurance()">Search</button>
+                            
                         </div>
                     </div>
                     <div class="column">
@@ -99,49 +101,11 @@
                                     </header>
                                     <div class="card-content">
                                         <div class="content">
-                                            <h5><strong>Patient Name</strong></h5>
-                                            <h5><strong>Insurance ID</strong></h5>
-                                            <div class="field is-horizontal">
-                                                    <div class="field-label is-normal">
-                                                        <label class="label">Insurance ID Status</label>
-                                                    </div>
-                                                    <div class="field-body">
-                                                        <div class="field is-narrow">
-                                                            <div class="control">
-                                                                <div class="select is-fullwidth">
-                                                                    <select>
-                                                                        <option>Approved</option>
-                                                                        <option>Rejected</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field is-horizontal">
-                                                        <div class="field-label is-normal">
-                                                            <label class="label">Insurance Response ID</label>
-                                                        </div>
-                                                        <div class="field-body">
-                                                            <div class="field">
-                                                                <p class="control is-expanded">
-                                                                    <input class="input" type="text" placeholder="Insurance Response ID">
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="field is-horizontal">
-                                                            <div class="field-label is-normal">
-                                                                <label class="label">Date</label>
-                                                            </div>
-                                                            <div class="field-body">
-                                                                <div class="field">
-                                                                    <p class="control is-expanded">
-                                                                        <input class="input" type="text" placeholder="Date">
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                            <h5>Patient Name</h5>
+                                            <h5>Insurance ID</h5>
+                                            <h5>Insurance ID Status</h5>
+                                            <h5>Insurance Response ID</h5>
+                                            <h5>Date</h5>
                                         </div>
                                     </div>
                                     <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="sendInsuranceCompany()">Send</button>
@@ -169,40 +133,11 @@
                                                     <h5>Diagnosis Code</h5>
                                                     <h5>Diagnosis Description</h5>
                                                     <h5>Length Of Stay</h5>
-                                                    <h5>Requested Treatment Ammount</h5>
                                                     <h3><strong style="color:#757575">Response Information</strong></h3>
-                                                    <div class="field is-horizontal">
-                                                            <div class="field-label is-normal">
-                                                                <label class="label">Clinical Response ID</label>
-                                                            </div>
-                                                            <div class="field-body">
-                                                                <div class="field">
-                                                                    <p class="control is-expanded">
-                                                                        <input class="input" type="text" placeholder="Claims Approval ID">
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                    </div>
-                                                    <div class="field is-horizontal">
-                                                            <div class="field-label is-normal">
-                                                                <label class="label">Clinical Resquest Status</label>
-                                                            </div>
-                                                            <div class="field-body">
-                                                                    <div class="field is-narrow">
-                                                                        <div class="control">
-                                                                            <div class="select is-fullwidth">
-                                                                                <select>
-                                                                                    <option>Approved</option>
-                                                                                    <option>Rejected</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                    </div>
+                                                    <h5>Clinical Response ID</h5>
+                                                    <h5>Clinical Resquest Status</h5>
                                                 </div>
                                          </div>
-                                        <button class="button is-info is-large button-override" style="float:right; margin-top:10px">Request</button>
                                         </div>
                                         </div>
                                         <div class="column">
@@ -215,24 +150,54 @@
                                                         <div class="card-content">
                                                             <div class="content">
                                                                 <h3><strong style="color:#757575">Request Information</strong></h3>
-                                                                <h5>Claims Request ID</h5>
-                                                                <h5>Diagnosis Code</h5>
-                                                                <h5>LOINC Code</h5>
-                                                                <h5>CPT Code</h5>
-                                                                <h5>Amount</h5>
-                                                                <h3><strong style="color:#757575">Response Information</strong></h3>
                                                                 <div class="field is-horizontal">
                                                                         <div class="field-label is-normal">
-                                                                            <label class="label">Claims Approval ID</label>
+                                                                            <label class="label">Claims Request ID</label>
                                                                         </div>
                                                                         <div class="field-body">
                                                                             <div class="field">
                                                                                 <p class="control is-expanded">
-                                                                                    <input class="input" type="text" placeholder="Claims Approval ID">
+                                                                                    <input class="input" type="text" placeholder="Claims Request ID">
+                                                                                </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="field is-horizontal">
+                                                                        <div class="field-label is-normal">
+                                                                            <label class="label">Diagnosis Code</label>
+                                                                        </div>
+                                                                        <div class="field-body">
+                                                                            <div class="field">
+                                                                                <p class="control is-expanded">
+                                                                                    <input class="input" type="text" placeholder="Diagnosis Code">
                                                                                 </p>
                                                                             </div>
                                                                         </div>
-                                                                </div>
+                                                                    </div>
+                                                                <div class="field is-horizontal">
+                                                                        <div class="field-label is-normal">
+                                                                            <label class="label">LOINC Code</label>
+                                                                        </div>
+                                                                        <div class="field-body">
+                                                                            <div class="field">
+                                                                                <p class="control is-expanded">
+                                                                                    <input class="input" type="text" placeholder="LOINC Code">
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                <div class="field is-horizontal">
+                                                                        <div class="field-label is-normal">
+                                                                            <label class="label">CPT Code</label>
+                                                                        </div>
+                                                                        <div class="field-body">
+                                                                            <div class="field">
+                                                                                <p class="control is-expanded">
+                                                                                    <input class="input" type="text" placeholder="CPT Code">
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 <div class="field is-horizontal">
                                                                         <div class="field-label is-normal">
                                                                             <label class="label">Amount</label>
@@ -244,10 +209,10 @@
                                                                                 </p>
                                                                             </div>
                                                                         </div>
-                                                                </div>
+                                                                    </div>
                                                             </div>
                                                         </div>
-                                                        <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="sendInsuranceCompany()">Send</button>
+                                                        <button class="button is-info is-large button-override" style="float:right; margin-top:10px">Request</button>
                                                     </div>
 
                                         </div>
