@@ -223,12 +223,12 @@
         <script src="assets/js/bulma.js" type="text/javascript"></script>
         <script src="assets/js/app.js" type="text/javascript"></script>
         <script>
-            $('#send').on('click', function () {
-                sendInsuranceCompany();
-                onBoardPatientInsuranceCard();
-            });
+                        $('#send').on('click', function () {
+                            sendInsuranceCompany();
+                            onBoardPatientInsuranceCard();
+                        });
             
-            function makeid() {
+                        function makeid() {
                             var text = "";
                             var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             
@@ -253,13 +253,12 @@
                                     "date": timeStampInMs
                                 }
                             ));
-                            alert('done 1');
                         }
                         function onBoardPatientInsuranceCard(){
                             var xhttp = new XMLHttpRequest();
                             var insuranceRequestID = makeid();
                             var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
-                            xhttp.open("POST", "http://localhost:3000/api/OnBoardPatientInsuranceCard", true);
+                            xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
                             xhttp.setRequestHeader("Content-type","application/json");
                             xhttp.send(JSON.stringify(
                                 {
@@ -270,8 +269,7 @@
                                     "patientLastName": "Mohammed",
                                     "date": timeStampInMs
                                 }
-                            ));
-                            alert('done 2');
+                            )); 
                         }
         </script>
     </body>
