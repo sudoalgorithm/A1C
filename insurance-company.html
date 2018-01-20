@@ -165,14 +165,15 @@
                                         <div class="card-content">
                                                 <div class="content">
                                                     <h3><strong style="color:#757575">Request Information</strong></h3>
-                                                    <h5>Hospital ID</h5>
-                                                    <h5>Hospital Name</h5>
-                                                    <h5>Physician ID</h5>
-                                                    <h5>Clinical Request ID</h5>
-                                                    <h5>Diagnosis Code</h5>
-                                                    <h5>Diagnosis Detail</h5>
-                                                    <h5>Length Of Stay</h5>
-                                                    <h5>Treatment Amount</h5>
+                                                    <h5>Hospital ID</h5><span id="hospitalid"></span>
+                                                    <h5>Hospital Name</h5><span id="hospitalname"></span>
+                                                    <h5>Physician Name</h5><span id="physicianname"></span>
+                                                    <h5>Clinical Request ID</h5><span id="clinicalrequestid"></span>
+                                                    <h5>Date Of Admission</h5><span id="dateofadmission"></span>
+                                                    <h5>Diagnosis Code</h5><span id="diagnosiscode"></span>
+                                                    <h5>Diagnosis Detail</h5><span id="diagnosisdetail"></span>
+                                                    <h5>Length Of Stay</h5><span id="lengthofstay"></span>
+                                                    <h5>Treatment Amount</h5><span id="treatmentamount"></span>
                                                     <h3><strong style="color:#757575">Response Information</strong></h3>
                                                     <div class="field is-horizontal">
                                                             <div class="field-label is-normal">
@@ -278,6 +279,7 @@
         <script>
             window.onload = function(){
                 getData();
+                getClinicalInformation();
             }
             function getData(){
                 var xhttp = new XMLHttpRequest();
@@ -295,7 +297,7 @@
             function sendData(){
                 var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
                 var xhttp = new XMLHttpRequest();
-                xhttp.open("POST", "http://localhost:3000/api/ApproveInsuranceCardRequest", "true");
+                xhttp.open("POST", "http://localhost:3000/api/ApproveInsuranceCardRequest", true);
                 xhttp.setRequestHeader("Content-type","application/json");
                 xhttp.send(JSON.stringify(
                     {
@@ -313,6 +315,30 @@
                       }
                 )); 
             }
+
+            function getClinicalInformation(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset", false);
+                xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    var obj = JSON.parse(this.responseText);
+                                    document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                                    document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                                    document.getElementById("physicianname").innerHTML = obj.physicianId;
+                                    document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                                    document.getElementById("diagnosisdetail").innerHTML = obj.diagnosisDescription;
+                                    document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+                                    document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                                
+                                
+                            }
+                            
+                };
+                xhttp.send();
+
+            }
+
+            
 
             
         </script>   
