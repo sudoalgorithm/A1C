@@ -68,3 +68,8 @@ a{
 .focus:focus {
     color: black;
 }
+
+
+label{
+    float: left;
+}

@@ -68,3 +68,7 @@ a{
 .focus:focus {
     color: red;
 }
+
+label{
+    float: left;
+}
