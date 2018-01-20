@@ -182,7 +182,7 @@
                                                             <div class="field-body">
                                                                 <div class="field">
                                                                     <p class="control is-expanded">
-                                                                        <input class="input" type="text" placeholder="Claims Approval ID">
+                                                                        <input class="input" id="clinicalresponseid" type="text" placeholder="Claims Approval ID">
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -206,7 +206,7 @@
                                                     </div>
                                                 </div>
                                          </div>
-                                        <button class="button is-info is-large button-override" style="float:right; margin-top:10px">Request</button>
+                                        <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="clinicalInformation();">Request</button>
                                         </div>
                                         </div>
                                         <div class="column">
@@ -336,6 +336,26 @@
                 };
                 xhttp.send();
 
+            }
+
+            function sendInsuranceCompany(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("POST", "http://localhost:3000/api/ApprovePriorAuthorization", true);
+                xhttp.setRequestHeader("Content-type","application/json");
+                xhttp.send(JSON.stringify(
+                    
+                        {
+                            "$class": "org.acme.health.ApprovePriorAuthorization",
+                            "clinical": {
+                              "$class": "org.acme.health.ClinicalAssetResponse",
+                              "clinicalResponseId": "response",
+                              "clinicalRequestId": document.getElementById("clinicalresponseid").value,
+                              "isApproved": true
+                            }
+                          }
+                      
+                ));
+                 
             }
 
             
