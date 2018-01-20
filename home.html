@@ -241,7 +241,6 @@
                         }
                         var insuranceRequestID = makeid();
                         function sendInsuranceCompany(){
-                            console.log(insuranceRequestID)
                             var xhttp = new XMLHttpRequest();
                             var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
                             xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
@@ -258,7 +257,6 @@
                             ));
                         }
                         function onBoardPatientInsuranceCard(){
-                            console.log(insuranceRequestID)
                             var xhttp = new XMLHttpRequest();
                             var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
                             xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
@@ -268,7 +266,8 @@
                                     "$class": "org.acme.health.OnboardPatientInsuranceCard",
                                      "card":{
                                         "$class": "org.acme.health.InsuranceCard",
-                                        "insuranceRequestId": insuranceRequestID,
+                                        "insuranceRequestId": "",
+                                        "insuranceRequestTransactionId": insuranceRequestID,
                                         "patientInsuranceId": "1357924680",
                                         "patientFirstName": "Aisha",
                                         "patientLastName": "Mohammed",
