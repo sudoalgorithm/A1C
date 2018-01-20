@@ -228,23 +228,25 @@
 
                 for (var i = 0; i < 5; i++)
                     text += possible.charAt(Math.floor(Math.random() * possible.length));
-
+                console.log(text)
                 return text;
             }
             function sendInsuranceCompany(){
                 var xhttp = new XMLHttpRequest();
                 var insuranceRequestID = makeid();
+                console.log(insuranceRequestID)
                 var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
+                console.log(insuranceRequestID)
                 xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
                 xhttp.setRequestHeader("Content-type","application/json");
                 xhttp.send(JSON.stringify(
                     {
                         "$class": "org.acme.health.InsuranceCard",
-                        "insuranceRequestId": insuranceRequestID.toString,
+                        "insuranceRequestId": insuranceRequestID,
                         "patientInsuranceId": "1357924680",
                         "patientFirstName": "Aisha",
                         "patientLastName": "Mohammed",
-                        "date": timeStampInMs.toString
+                        "date": timeStampInMs
                     }
                 ));
             }
