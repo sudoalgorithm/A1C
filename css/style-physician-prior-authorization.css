@@ -65,11 +65,6 @@ a{
     width: 20%;
 }
 
-.focus:focus {
-    color: black;
-}
-
-
 label{
     float: left;
 }
