@@ -263,7 +263,14 @@
                             xhttp.send(JSON.stringify(
                                 {
                                     "$class": "org.acme.health.OnboardPatientInsuranceCard",
-                                     "card": "resource:org.acme.health.InsuranceCard#zjG65"
+                                     "card":{
+                                        "$class": "org.acme.health.InsuranceCard",
+                                        "insuranceRequestId": insuranceRequestID,
+                                        "patientInsuranceId": "1357924680",
+                                        "patientFirstName": "Aisha",
+                                        "patientLastName": "Mohammed",
+                                        "date": timeStampInMs
+                                     }
                                 }
                             )); 
                         }
