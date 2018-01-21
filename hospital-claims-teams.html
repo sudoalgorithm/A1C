@@ -225,7 +225,9 @@
             window.onload = function(){
                 getInsuranceCardInfromation();
                 getClinicalInformation();
+                getResponseInformation();
             }
+            
             function sendClaimsInfromation(){
                 var xhttp = new XMLHttpRequest();
                 xhttp.open("POST", "http://localhost:3000/api/IssueClaimsInformation", true);
