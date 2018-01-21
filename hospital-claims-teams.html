@@ -254,7 +254,7 @@
                         var obj = JSON.parse(this.responseText);
                         document.getElementById("patientname").innerHTML = obj.patientFirstName+" "+obj.patientLastName;
                         document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
-                        if(obj[0].isCovered === true){
+                        if(obj.isCovered === true){
                             document.getElementById("insuranceidstatus").innerHTML = "Covered";
                         }else{
                             document.getElementById("insuranceidstatus").innerHTML = "UnCovered";
