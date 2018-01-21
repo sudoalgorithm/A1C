@@ -232,7 +232,6 @@
                 var xhttp = new XMLHttpRequest();
                 xhttp.open("POST", "http://localhost:3000/api/IssueClaimsInformation", true);
                 xhttp.setRequestHeader("Content-type","application/json");
-                console.log(document.getElementById("diagnosiscode").value);
                 xhttp.send(JSON.stringify({
                         "$class": "org.acme.health.IssueClaimsInformation",
                         "claims": {
