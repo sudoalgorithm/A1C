@@ -84,7 +84,7 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <p class="control is-expanded">
-                                                    <input class="input" type="text" placeholder="Patient ID"> 
+                                                    <input id="patientid" class="input" type="text" placeholder="Patient ID"> 
                                                 </p>
                                             </div>
                                         </div>
@@ -96,7 +96,7 @@
                                             <div class="field-body">
                                                 <div class="field">
                                                     <p class="control is-expanded">
-                                                        <input class="input" type="text" value="Aisha Mohammed" placeholder="Patient Name">
+                                                        <input class="input" id="paitentname" type="text" placeholder="Patient Name">
                                                     </p>
                                                 </div>
                                             </div>
@@ -108,7 +108,7 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <p class="control is-expanded">
-                                                    <input class="input" type="text" value="44" placeholder="Age">
+                                                    <input class="input" id="age" type="text" placeholder="Age">
                                                 </p>
                                             </div>
                                         </div>
@@ -137,7 +137,7 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <p class="control is-expanded">
-                                                    <input class="input" type="text" value="1234567890123" placeholder="Emirates ID">
+                                                    <input class="input" id="emiratesid" type="text" placeholder="Emirates ID">
                                                 </p>
                                             </div>
                                         </div>
@@ -149,7 +149,7 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <p class="control is-expanded">
-                                                    <input class="input" type="text" placeholder="Insurance ID">
+                                                    <input class="input" id="insuranceid" type="text" placeholder="Insurance ID">
                                                 </p>
                                             </div>
                                         </div>
@@ -161,7 +161,7 @@
                                         <div class="field-body">
                                             <div class="field">
                                                 <p class="control is-expanded">
-                                                    <input class="input" type="number" value="971543651972" placeholder="Contact Number">
+                                                    <input class="input" id="contactnumber" type="number" placeholder="Contact Number">
                                                 </p>
                                             </div>
                                         </div>
@@ -189,14 +189,14 @@
                                             <div class="field-body">
                                                 <div class="field">
                                                     <p class="control is-expanded">
-                                                        <input class="input" type="text" value="aishamohammed@test.com" placeholder="Email" onclick="getSearch()">
+                                                        <input class="input" id="email" type="text" placeholder="Email">
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            <button class="button is-info is-large button-override" style="float:right; margin-top:10px">Search</button>          
+                            <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="getSearch()">Search</button>          
                         </div>
                     </div>
                     <div class="column">
@@ -206,13 +206,54 @@
                                     </header>
                                     <div class="card-content">
                                         <div class="content">
-                                        <h5>Patient Name</h5>
-                                        <h5>Insurance ID</h5>
-                                        <h5>Insurance ID Status</h5> <span id="insuranceStatus"></span>
-                                        <h5>Eligibility Request ID</h5>
-                                    </div>
+                                            <div class="columns">
+                                                <div class="column is-one-fifth">
+                                                    <h5>Patient Name</h5>
+                                                </div>
+                                                <div class="column">
+                                                    <span id="patientnameicf"></span>
+                                                </div>
+                                                <div class="column"></div>
+                                                <div class="column"></div>
+                                                <div class="column"></div>
+                                            </div>
+                                            <div class="columns">
+                                                <div class="column is-one-fifth">
+                                                    <h5>Insurance ID</h5>
+                                                </div>
+                                                <div class="column">
+                                                    <span id="insuranceidicf"></span>
+                                                </div>
+                                                <div class="column"></div>
+                                                <div class="column"></div>
+                                                <div class="column"></div>
+                                            </div>
+                                            <div class="columns">
+                                                <div class="column is-one-fifth">
+                                                    <h5>Insurance ID Status</h5>
+                                                </div>
+                                                <div class="column">
+                                                    <span id="insuranceStatus"></span>
+                                                </div>
+                                                <div class="column"></div>
+                                                <div class="column"></div>
+                                                <div class="column"></div>
+                                            </div>
+                                            <div class="columns">
+                                                <div class="column is-one-fifth">
+                                                    <h5>Eligibility Request ID</h5>
+                                                </div>
+                                                <div class="column"></div>
+                                                <div class="column"></div>
+                                                <div class="column"></div>
+                                                <div class="column"></div>
+                                            </div>
+                                            
+                                            
+                                            
+                                        </div>
                                 </div>
-                                <button class="button is-info is- large button-override" style="float:right; margin-top:10p" onclick="onBoardPatientInsuranceCard();">Send</button>
+                                <button class="button is-info is-large button-override" style="float:right; margin-top:10px" onclick="onBoardPatientInsuranceCard();">Send</button>
                             </div>
                         <br>
                     </div>
@@ -274,6 +315,26 @@
                         window.onload = function(){
                             getInsuranceStatus();
                         }
+
+                        function getSearch(){
+                            console.log(typeof document.getElementById("patientid").value);
+                            if(document.getElementById("patientid").value === "1234"){
+                                document.getElementById("paitentname").value = "Aisha Mohammed";
+                                document.getElementById("age").value = "44";
+                                document.getElementById("emiratesid").value = "123456789";
+                                document.getElementById("contactnumber").value = "971543651972";
+                                document.getElementById("email").value = "aishamohammed@test.com"
+                                document.getElementById("patientnameicf").innerHTML = "Aisha Mohammed";
+                            }
+                            if(document.getElementById("insuranceid").value === null){
+                                document.getElementById("insuranceidicf").innerHTML = " ";
+                            }
+                            if(document.getElementById("insuranceid") !== null){
+                                document.getElementById("insuranceidicf").innerHTML = document.getElementById("insuranceid").value;
+                            }
+                            
+                        }
+
 
                     
         </script>
