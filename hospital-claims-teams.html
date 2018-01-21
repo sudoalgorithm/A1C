@@ -170,7 +170,7 @@
                                                                         <div class="field-body">
                                                                             <div class="field">
                                                                                 <p class="control is-expanded">
-                                                                                    <input class="input" id="diagnosiscode" type="text" placeholder="Diagnosis Code">
+                                                                                    <input class="input" id="diagnosisCode" type="text" placeholder="Diagnosis Code">
                                                                                 </p>
                                                                             </div>
                                                                         </div>
@@ -232,12 +232,13 @@
                 var xhttp = new XMLHttpRequest();
                 xhttp.open("POST", "http://localhost:3000/api/IssueClaimsInformation", true);
                 xhttp.setRequestHeader("Content-type","application/json");
+                console.log(document.getElementById("diagnosiscode").value); 
                 xhttp.send(JSON.stringify({
                         "$class": "org.acme.health.IssueClaimsInformation",
                         "claims": {
                             "$class": "org.acme.health.ClaimsInformation",
                             "claimsRequestId": document.getElementById("claimsrequestid").value,
-                            "diagnosisCode": document.getElementById("diagnosiscode").value,
+                            "diagnosisCode": document.getElementById("diagnosisCode").value,
                             "loincCode": document.getElementById("loinccode").value,
                             "cptCode": document.getElementById("cptcode").value,
                             "amount": document.getElementById("amount").value
