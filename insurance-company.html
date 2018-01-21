@@ -219,11 +219,11 @@
                                                         <div class="card-content">
                                                             <div class="content">
                                                                 <h3><strong style="color:#757575">Request Information</strong></h3>
-                                                                <h5>Claims Request ID</h5>
-                                                                <h5>Diagnosis Code</h5>
-                                                                <h5>LOINC Code</h5>
-                                                                <h5>CPT Code</h5>
-                                                                <h5>Amount</h5>
+                                                                <h5>Claims Request ID</h5><span id="claimsRequestid"></span>
+                                                                <h5>Diagnosis Code</h5><span id="diagnosiscode"></span>
+                                                                <h5>LOINC Code</h5><span id="loincode"></span>
+                                                                <h5>CPT Code</h5><span id="cptcode"></span>
+                                                                <h5>Amount</h5><span id="amount"></span>
                                                                 <h3><strong style="color:#757575">Response Information</strong></h3>
                                                                 <div class="field is-horizontal">
                                                                         <div class="field-label is-normal">
@@ -280,6 +280,7 @@
             window.onload = function(){
                 getData();
                 getClinicalInformation();
+                getClaimsInfromation();
             }
             function getData(){
                 var xhttp = new XMLHttpRequest();
@@ -359,6 +360,26 @@
                 ));
                 alert("Data Sent To Hospital Claims Team");
                  
+            }
+
+            function getClaimsInfromation(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset", false);
+                xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    var obj = JSON.parse(this.responseText);
+                                    document.getElementById("claimsRequestid").innerHTML = obj.claimsRequestId;
+                                    document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                                    document.getElementById("loincode").innerHTML = obj.loincCode;
+                                    document.getElementById("cptcode").innerHTML = obj.cptCode;
+                                    document.getElementById("amount").innerHTML = obj.amount;
+                                
+                                
+                                
+                            }
+                            
+                };
+                xhttp.send();
             }
 
             
