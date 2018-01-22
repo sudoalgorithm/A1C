@@ -1,5 +1,3 @@
-console.log("Hospital Claims Team JS is active")
-
 window.onload = function(){
     getInsuranceCardInfromation();
     getClinicalInformation();

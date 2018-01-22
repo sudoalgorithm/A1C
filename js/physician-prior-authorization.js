@@ -1,5 +1,3 @@
-console.log("Physician Prior Authorization JS is active")
-
 window.onload = function(){
     getInsuranceStatus();
     getPatientData();

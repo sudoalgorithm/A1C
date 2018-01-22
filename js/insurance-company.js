@@ -1,10 +1,9 @@
-console.log("Insurance Company JS is Active")
-
 window.onload = function(){
     getData();
     getClinicalInformation();
     getClaimsInfromation();
 }
+
 function getData(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/card",false);
