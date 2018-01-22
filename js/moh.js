@@ -1,0 +1,1 @@
+console.log("MOH JS is active")
