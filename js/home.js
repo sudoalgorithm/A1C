@@ -60,7 +60,7 @@ function getSearch(){
         document.getElementById("emiratesid").value = "784-1974-123456-2";
         document.getElementById("insuranceid").value = "AA-001-900"
         document.getElementById("contactnumber").value = "971765432612";
-        document.getElementById("email").value = "ishamohammed@test.com"
+        document.getElementById("email").value = "aishamohammed@test.com"
         document.getElementById("patientnameicf").innerHTML = "Aisha Mohammed";
         document.getElementById("insuranceidicf").innerHTML = "AA-001-900"
     }
@@ -119,4 +119,16 @@ function getSearch(){
         document.getElementById("patientnameicf").innerHTML = "Hesham Osama";
         document.getElementById("insuranceidicf").innerHTML = "CC-002-450"
     }
+
+    var patientid = document.getElementById("patientid").value;
+    var paitentname = document.getElementById("paitentname").value;
+    var age = document.getElementById("age").value;
+    var sex = document.getElementById("sex").value;
+    var emiratesid = document.getElementById("emiratesid").value;
+    var insuranceid = document.getElementById("insuranceid").value;
+    var contactnumber = document.getElementById("contactnumber").value;
+    var email = document.getElementById("email").value;
+
+    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
+    window.location.href = "insurance-company.html" + queryBuilder;
 }

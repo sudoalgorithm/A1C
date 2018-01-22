@@ -14,17 +14,10 @@ html, body{
     border: 0px !important;
 }
 
-th{
-    font-size: 20px;
-    background-color: #be9647;
-    color: #FFFFFF !important;
-}
-
 #logo-ibm{
-    height: 60%;
-    width: 16%;
+    height: 40%;
+    width: 11%;
     margin-right: 8px;
-    margin-bottom: 5%;
 }
 
 #logo-mohap{
@@ -75,3 +68,9 @@ a{
 label{
     float: left;
 }
+
+h5 span{
+    float: left;
+}
+
+
