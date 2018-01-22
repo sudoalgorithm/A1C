@@ -119,7 +119,9 @@ function getSearch(){
         document.getElementById("patientnameicf").innerHTML = "Hesham Osama";
         document.getElementById("insuranceidicf").innerHTML = "CC-002-450"
     }
+}
 
+function sendData(){
     var patientid = document.getElementById("patientid").value;
     var paitentname = document.getElementById("paitentname").value;
     var age = document.getElementById("age").value;

@@ -51,6 +51,10 @@ function sendClinicalInformation(){
     alert("Data Send To Insurance Company");    
 }
 
+function autoFile(){
+    document.getElementById("hospitalname").value = "Hospital XYZ";
+}
+
 var querryString = decodeURIComponent(window.location.search);
 querryString = querryString.substring(1);
 var queries = querryString.split("&");
@@ -66,4 +70,6 @@ for(var i = 0; i < queries.length; i++){
     document.getElementById("visittype").innerHTML = "Inpatient"
     document.getElementById("email").innerHTML = queries[7].replace("param7","");
 }
+
+
 
