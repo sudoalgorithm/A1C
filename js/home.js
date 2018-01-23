@@ -15,7 +15,6 @@ function onBoardPatientInsuranceCard(){
     var paitentname = document.getElementById("paitentname").value;
     var dateOfExpiry = "";
     if(patientid === "123"){
-        var dateofexpiry = document.getElementById("dateofexpiry").innerText;
         dateOfExpiry = date[0];
     }
     if(patientid === "234"){
