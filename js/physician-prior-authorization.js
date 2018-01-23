@@ -54,8 +54,8 @@ function sendClinicalInformation(){
 function autoFile(){
     if(document.getElementById("hospitalid").value === "ZZ123"){
         document.getElementById("hospitalname").value = "Test Hospital";
-        document.getElementById("patientname").value = "Aisha Mohammed";
-        document.getElementById("insuranceid").value = "AA-001-900";
+        document.getElementById("patientnamecf").value = "Aisha Mohammed";
+        document.getElementById("insuranceidcf").value = "AA-001-900";
         document.getElementById("physicianname").value = "Dr Hananah";
         document.getElementById("clinicalrequestid").value = "";
         document.getElementById("dateofadmission").value = "01/02/2018";
@@ -65,8 +65,8 @@ function autoFile(){
     }
     if(document.getElementById("hospitalid").value === "ZZ124"){
         document.getElementById("hospitalname").value = "Block Chain Hospital";
-        document.getElementById("patientname").value = "Aamina Ali";
-        document.getElementById("insuranceid").value = "BB-007-600";
+        document.getElementById("patientnamecf").value = "Aamina Ali";
+        document.getElementById("insuranceidcf").value = "BB-007-600";
         document.getElementById("physicianname").value = "Dr Alex";
         document.getElementById("clinicalrequestid").value = "";
         document.getElementById("dateofadmission").value = "02/02/2018";
