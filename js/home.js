@@ -1,3 +1,5 @@
+var date = ["July, 2018","January, 2018","November, 2018"];
+
 var patientid = document.getElementById("patientid").value;
 var patientInsuranceId = document.getElementById("insuranceid").value;
 var paitentname = document.getElementById("paitentname").value;
@@ -65,7 +67,7 @@ function getSearch(){
         document.getElementById("insuranceidicf").innerHTML = "AA-001-900"
         document.getElementById("insuranceStatus").innerHTML = "Active";
         document.getElementById("eligibilityrequestid").innerHTML = "ABCD";
-        document.getElementById("dateofexpiry").innerHTML = "July, 2018";
+        document.getElementById("dateofexpiry").innerHTML = date[0];
         setTimeout(function(){
             alert("Data Sent To Physician Prior Authorization")
         }, 1000);
@@ -82,7 +84,7 @@ function getSearch(){
         document.getElementById("insuranceidicf").innerHTML = "BB-007-600"
         document.getElementById("insuranceStatus").innerHTML = "Active";
         document.getElementById("eligibilityrequestid").innerHTML = "EFGH";
-        document.getElementById("dateofexpiry").innerHTML = "January, 2018";
+        document.getElementById("dateofexpiry").innerHTML = date[1];
         setTimeout(function(){
             alert("Data Sent To Physician Prior Authorization")
         }, 1000);
@@ -99,7 +101,7 @@ function getSearch(){
         document.getElementById("insuranceidicf").innerHTML = "CC-002-400"
         document.getElementById("insuranceStatus").innerHTML = "Inactive";
         document.getElementById("eligibilityrequestid").innerHTML = "IJKL"
-        document.getElementById("dateofexpiry").innerHTML = "November, 2018";
+        document.getElementById("dateofexpiry").innerHTML = date[2];
         setTimeout(function(){
             alert("Data Sent To Physician Prior Authorization")
         }, 1000);
