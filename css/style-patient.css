@@ -3,7 +3,7 @@
     src: url(../assets/fonts/DubaiW23-Regular.woff)
 }
 
-html, body{
+html, body, h1, h2, h3, h4, h5, h6{
     font-family: dubai-font;
 }
 
@@ -15,15 +15,15 @@ html, body{
 }
 
 #logo-ibm{
-    height: 40%;
-    width: 11%;
+    height: 43%;
+    width: 23%;
     margin-right: 8px;
-    margin-bottom: 8%;
+    margin-bottom: 15%;
 }
 
 #logo-mohap{
     height: 100%;
-    width: 25%;
+    width: 50%;
     margin-left: 8px;
 }
 
@@ -69,3 +69,7 @@ a{
 label{
     float: left;
 }
+
+
+
+

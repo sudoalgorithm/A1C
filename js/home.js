@@ -14,6 +14,7 @@ function onBoardPatientInsuranceCard(){
     var patientInsuranceId = document.getElementById("insuranceid").value;
     var paitentname = document.getElementById("paitentname").value;
     var dateOfExpiry = "";
+    var randomblahblahblah = makeid(); 
     if(patientid === "123"){
         dateOfExpiry = date[0];
         document.getElementById("insuranceStatus").innerHTML = "Active";
@@ -57,10 +58,12 @@ function onBoardPatientInsuranceCard(){
         {
             "$class": "org.acme.health.InsuranceCard",
             "insuranceRequestId": patientid, 
+            "insuranceResponseId": randomblahblahblah,
             "patientInsuranceId": patientInsuranceId,
             "patientFirstName": paitentname,
             "patientLastName": paitentname,
-            "dateOfExpiry": dateOfExpiry
+            "dateOfExpiry": dateOfExpiry,
+            "isActive": true
           }
     ));
     alert("Data Sent To Insurance Company"); 
