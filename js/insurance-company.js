@@ -28,7 +28,7 @@ function getData(){
             var obj = JSON.parse(this.responseText);
             document.getElementById("name").innerHTML = obj.patientFirstName;
             document.getElementById("insuranceidpr").innerHTML = obj.patientInsuranceId;
-            document.getElementById("eligibilityid").value = "";
+            document.getElementById("eligibilityid").value = obj.insuranceResponseId;
             document.getElementById("dateofexpiry").value = obj.dateOfExpiry;
         }
     };
