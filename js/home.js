@@ -9,18 +9,21 @@ function makeid() {
 }
 
 function onBoardPatientInsuranceCard(){
-    console.log("onBoardPatientInsuranceCard function");
+    var patientid =  document.getElementById("patientid").value;
+    var insuranceid = document.getElementById("insuranceid").value;
+    var patientaname = document.getElementById("patientname").value;
+    var dateOfExpiry = document.getElementById("dateofexpiry").value;
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
     xhttp.setRequestHeader("Content-type","application/json");
     xhttp.send(JSON.stringify(
         {
             "$class": "org.acme.health.InsuranceCard",
-            "insuranceRequestId": document.getElementById("patientid").value,
-            "patientInsuranceId": document.getElementById("insuranceid").value,
-            "patientFirstName": document.getElementById("patientname").value,
-            "patientLastName": document.getElementById("patientname").value,
-            "dateOfExpiry": document.getElementById("dateofexpiry").value
+            "insuranceRequestId": patientid,
+            "patientInsuranceId": insuranceid,
+            "patientFirstName": patientaname,
+            "patientLastName": patientaname,
+            "dateOfExpiry": dateOfExpiry
           }
     ));
 }
