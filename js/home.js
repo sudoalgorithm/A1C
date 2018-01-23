@@ -20,11 +20,11 @@ function onBoardPatientInsuranceCard(){
     xhttp.send(JSON.stringify(
         {
             "$class": "org.acme.health.InsuranceCard",
-            "insuranceRequestId": patientid,
-            "patientInsuranceId": insuranceid,
-            "patientFirstName": patientaname,
-            "patientLastName": patientaname,
-            "dateOfExpiry": dateOfExpiry
+            "insuranceRequestId": "123",
+            "patientInsuranceId": "123",
+            "patientFirstName": "123",
+            "patientLastName": "adkafsd",
+            "dateOfExpiry": "asfgasgk"
           }
     ));
 }
