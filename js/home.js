@@ -9,6 +9,7 @@ function makeid() {
 }
 
 function onBoardPatientInsuranceCard(){
+    console.log(document.getElementById("patientname").value);
     var patientid =  document.getElementById("patientid").value;
     var insuranceid = document.getElementById("insuranceid").value;
     var patientaname = document.getElementById("patientname").value;
