@@ -10,24 +10,34 @@ function makeid() {
 
 function onBoardPatientInsuranceCard(){
     var xhttp = new XMLHttpRequest();
-    var patientInsuranceId = makeid();
-    var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
-    xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
+    xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
     xhttp.setRequestHeader("Content-type","application/json");
     xhttp.send(JSON.stringify(
         {
-            "$class": "org.acme.health.OnboardPatientInsuranceCard",
-             "card":{
-                "$class": "org.acme.health.InsuranceCard",
-                "insuranceRequestId": "card",
-                "patientInsuranceId": patientInsuranceId,
-                "patientFirstName": "Aisha",
-                "patientLastName": "Mohammed",
-                "date": timeStampInMs
-             }
-        }
+            "$class": "org.acme.health.InsuranceCard",
+            "insuranceRequestId": document.getElementById("patientid").value,
+            "patientInsuranceId": document.getElementById("insuranceid").value,
+            "patientFirstName": document.getElementById("patientname").value,
+            "patientLastName": document.getElementById("patientname").value,
+            "dateOfExpiry": document.getElementById("dateofexpiry").value
+          }
     ));
-    alert("Data Sent To Insurance Company"); 
+         
+    setTimeout(function(){
+        var xhttp = new XMLHttpRequest();
+        var patientInsuranceId = makeid();
+        var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
+        xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
+        xhttp.setRequestHeader("Content-type","application/json");
+        xhttp.send(JSON.stringify(
+            {
+                "$class": "org.acme.health.OnboardPatientInsuranceCard",
+                "card": "resource:org.acme.health.InsuranceCard#123"
+            }
+        ));
+        alert("Data Sent To Insurance Company"); 
+    }, 5000);
+    
 }
 
 function getInsuranceStatus(){
@@ -68,7 +78,7 @@ function getSearch(){
         document.getElementById("dateofexpiry").innerHTML = "July, 2018";
         setTimeout(function(){
             alert("Data Sent To Physician Prior Authorization")
-        }, 1000)
+        }, 1000);
     }
     if(document.getElementById("patientid").value === "234"){
         document.getElementById("paitentname").value = "Aamina Ali";
@@ -85,7 +95,7 @@ function getSearch(){
         document.getElementById("dateofexpiry").innerHTML = "January, 2018";
         setTimeout(function(){
             alert("Data Sent To Physician Prior Authorization")
-        }, 1000)
+        }, 1000);
     }
     if(document.getElementById("patientid").value === "345"){
         document.getElementById("paitentname").value = "AbdulRazzak Ahmed";
@@ -102,7 +112,7 @@ function getSearch(){
         document.getElementById("dateofexpiry").innerHTML = "November, 2018";
         setTimeout(function(){
             alert("Data Sent To Physician Prior Authorization")
-        }, 1000)
+        }, 1000);
     }
     if(document.getElementById("patientid").value === "456"){
         document.getElementById("paitentname").value = "Hanifa Shaheen";
