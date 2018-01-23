@@ -17,38 +17,45 @@ function onBoardPatientInsuranceCard(){
     var randomblahblahblah = makeid();
     var active = "Active";
     var Inactive = "Inactive";
+    var status = "";
     if(patientid === "123"){
         dateOfExpiry = date[0];
+        status = active;
         document.getElementById("insuranceStatus").innerHTML = active;
         document.getElementById("eligibilityrequestid").innerHTML = "ABCD";
         document.getElementById("dateofexpiry").innerHTML = date[0];
     }
     if(patientid === "234"){
         dateOfExpiry = date[1];
+        status = active;
         document.getElementById("insuranceStatus").innerHTML = active;
         document.getElementById("eligibilityrequestid").innerHTML = "EFGH";
         document.getElementById("dateofexpiry").innerHTML = date[1];
     }
     if(patientid === "345"){
         dateOfExpiry = date[2];
+        status = Inactive;
         document.getElementById("insuranceStatus").innerHTML = Inactive;
         document.getElementById("eligibilityrequestid").innerHTML = "IJKL"
         document.getElementById("dateofexpiry").innerHTML = date[2];
     }
     if(patientid === "456"){
         dateOfExpiry = date[0];
+        status = active;
         document.getElementById("insuranceStatus").innerHTML = active;
         document.getElementById("eligibilityrequestid").innerHTML = "";
         document.getElementById("dateofexpiry").innerHTML = date[0];
     }
     if(patientid === "678"){
         dateOfExpiry = date[1];
+        status = active;
         document.getElementById("insuranceStatus").innerHTML = active;
         document.getElementById("eligibilityrequestid").innerHTML = "";
         document.getElementById("dateofexpiry").innerHTML = date[1];
     }
     if(patientid === "789"){
         dateOfExpiry = date[1];
+        status = Inactive;
         document.getElementById("insuranceStatus").innerHTML = Inactive;
         document.getElementById("eligibilityrequestid").innerHTML = "";
         document.getElementById("dateofexpiry").innerHTML = date[2];
@@ -65,7 +72,7 @@ function onBoardPatientInsuranceCard(){
             "patientFirstName": paitentname,
             "patientLastName": paitentname,
             "dateOfExpiry": dateOfExpiry,
-            "isActive": Inactive
+            "isActive": status
           }
     ));
     alert("Data Sent To Insurance Company"); 
