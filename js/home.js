@@ -25,7 +25,7 @@ function onBoardPatientInsuranceCard(){
         dateOfExpiry = date[1];
     }
     var xhttp = new XMLHttpRequest();
-    xhttp.open("PUT", "http://localhost:3000/api/InsuranceCard", true);
+    xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
     xhttp.setRequestHeader("Content-type","application/json");
     xhttp.send(JSON.stringify(
         {
