@@ -23,6 +23,15 @@ function onBoardPatientInsuranceCard(){
     if(patientid === "345"){
         dateOfExpiry = date[2];
     }
+    if(patientid === "456"){
+        dateOfExpiry = " ";
+    }
+    if(patientid === "678"){
+        dateOfExpiry = " ";
+    }
+    if(patientid === "789"){
+        dateOfExpiry = " ";
+    }
     var xhttp = new XMLHttpRequest();
     xhttp.open("PUT", "http://localhost:3000/api/InsuranceCard/"+patientid,true);
     xhttp.setRequestHeader("Content-type","application/json");
