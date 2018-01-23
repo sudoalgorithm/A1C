@@ -2,6 +2,7 @@ window.onload = function(){
     //getInsuranceCardInfromation();
     //getClinicalInformation();
     //getResponseInformation();
+    getData();
 }
 
 function getData(){
