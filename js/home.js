@@ -1,4 +1,4 @@
-var date = ["July, 2018","January, 2018","November, 2018"];
+var date = ["July, 2018","October, 2018","November, 2018"];
 function makeid() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -14,42 +14,44 @@ function onBoardPatientInsuranceCard(){
     var patientInsuranceId = document.getElementById("insuranceid").value;
     var paitentname = document.getElementById("paitentname").value;
     var dateOfExpiry = "";
-    var randomblahblahblah = makeid(); 
+    var randomblahblahblah = makeid();
+    var active = "Active";
+    var Inactive = "Inactive";
     if(patientid === "123"){
         dateOfExpiry = date[0];
-        document.getElementById("insuranceStatus").innerHTML = "Active";
+        document.getElementById("insuranceStatus").innerHTML = active;
         document.getElementById("eligibilityrequestid").innerHTML = "ABCD";
         document.getElementById("dateofexpiry").innerHTML = date[0];
     }
     if(patientid === "234"){
         dateOfExpiry = date[1];
-        document.getElementById("insuranceStatus").innerHTML = "Active";
+        document.getElementById("insuranceStatus").innerHTML = active;
         document.getElementById("eligibilityrequestid").innerHTML = "EFGH";
         document.getElementById("dateofexpiry").innerHTML = date[1];
     }
     if(patientid === "345"){
         dateOfExpiry = date[2];
-        document.getElementById("insuranceStatus").innerHTML = "Inactive";
+        document.getElementById("insuranceStatus").innerHTML = Inactive;
         document.getElementById("eligibilityrequestid").innerHTML = "IJKL"
         document.getElementById("dateofexpiry").innerHTML = date[2];
     }
     if(patientid === "456"){
         dateOfExpiry = " ";
-        document.getElementById("insuranceStatus").innerHTML = "";
+        document.getElementById("insuranceStatus").innerHTML = active;
         document.getElementById("eligibilityrequestid").innerHTML = "";
-        document.getElementById("dateofexpiry").innerHTML = "";
+        document.getElementById("dateofexpiry").innerHTML = date[0];
     }
     if(patientid === "678"){
         dateOfExpiry = " ";
-        document.getElementById("insuranceStatus").innerHTML = "";
+        document.getElementById("insuranceStatus").innerHTML = active;
         document.getElementById("eligibilityrequestid").innerHTML = "";
-        document.getElementById("dateofexpiry").innerHTML = "";
+        document.getElementById("dateofexpiry").innerHTML = date[1];
     }
     if(patientid === "789"){
         dateOfExpiry = " ";
-        document.getElementById("insuranceStatus").innerHTML = "";
+        document.getElementById("insuranceStatus").innerHTML = Inactive;
         document.getElementById("eligibilityrequestid").innerHTML = "";
-        document.getElementById("dateofexpiry").innerHTML = "";
+        document.getElementById("dateofexpiry").innerHTML = date[2];
     }
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "http://localhost:3000/api/InsuranceCard",true);
@@ -63,7 +65,7 @@ function onBoardPatientInsuranceCard(){
             "patientFirstName": paitentname,
             "patientLastName": paitentname,
             "dateOfExpiry": dateOfExpiry,
-            "isActive": false
+            "isActive": 
           }
     ));
     alert("Data Sent To Insurance Company"); 
