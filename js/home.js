@@ -9,24 +9,25 @@ function makeid() {
 }
 
 function onBoardPatientInsuranceCard(){
-    console.log(document.getElementById("patientname").value);
-    var patientid =  document.getElementById("patientid").value;
-    var insuranceid = document.getElementById("insuranceid").value;
-    var patientaname = document.getElementById("patientname").value;
-    var dateOfExpiry = document.getElementById("dateofexpiry").value;
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
+    var patientInsuranceId = makeid();
+    var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
+    xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
     xhttp.setRequestHeader("Content-type","application/json");
     xhttp.send(JSON.stringify(
         {
-            "$class": "org.acme.health.InsuranceCard",
-            "insuranceRequestId": "123",
-            "patientInsuranceId": "123",
-            "patientFirstName": "123",
-            "patientLastName": "adkafsd",
-            "dateOfExpiry": "asfgasgk"
-          }
+            "$class": "org.acme.health.OnboardPatientInsuranceCard",
+             "card":{
+                "$class": "org.acme.health.InsuranceCard",
+                "insuranceRequestId": "card",
+                "patientInsuranceId": patientInsuranceId,
+                "patientFirstName": "Aisha",
+                "patientLastName": "Mohammed",
+                "date": timeStampInMs
+             }
+        }
     ));
+    alert("Data Sent To Insurance Company"); 
 }
 
 function getInsuranceStatus(){
@@ -36,9 +37,9 @@ function getInsuranceStatus(){
         if (this.readyState == 4 && this.status == 200) {
         var obj = JSON.parse(this.responseText);
         if(obj[0].isCovered === true){
-            document.getElementById("insuranceStatus").innerHTML = "Active";
+            document.getElementById("insuranceStatus").innerHTML = "Covered";
         }else{
-            document.getElementById("insuranceStatus").innerHTML = "Expired";
+            document.getElementById("insuranceStatus").innerHTML = "Not Covered";
         }
         
     }
