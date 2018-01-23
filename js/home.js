@@ -63,7 +63,7 @@ function onBoardPatientInsuranceCard(){
             "patientFirstName": paitentname,
             "patientLastName": paitentname,
             "dateOfExpiry": dateOfExpiry,
-            "isActive": true
+            "isActive": false
           }
     ));
     alert("Data Sent To Insurance Company"); 
