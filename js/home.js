@@ -47,7 +47,7 @@ function onBoardPatientInsuranceCard(){
         xhttp.send(JSON.stringify(
             {
                 "$class": "org.acme.health.OnboardPatientInsuranceCard",
-                "card": "resource:org.acme.health.InsuranceCard#123"
+                "card": "resource:org.acme.health.InsuranceCard#"+patientid
             }
         ));
     alert("Data Sent To Insurance Company"); 

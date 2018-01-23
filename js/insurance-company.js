@@ -10,6 +10,7 @@ function getData(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
+            console.log(document.getElementById("insuranceid").innerHTML);
             document.getElementById("name").innerHTML = obj.patientFirstName;
             document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
         }
