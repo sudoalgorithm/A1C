@@ -36,9 +36,9 @@ function getInsuranceStatus(){
         if (this.readyState == 4 && this.status == 200) {
         var obj = JSON.parse(this.responseText);
         if(obj[0].isCovered === true){
-            document.getElementById("insuranceStatus").innerHTML = "Covered";
+            document.getElementById("insuranceStatus").innerHTML = "Active";
         }else{
-            document.getElementById("insuranceStatus").innerHTML = "Not Covered";
+            document.getElementById("insuranceStatus").innerHTML = "Expired";
         }
         
     }
