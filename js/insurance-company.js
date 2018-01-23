@@ -28,7 +28,7 @@ function getData(){
             var obj = JSON.parse(this.responseText);
             console.log(document.getElementById("insuranceid").innerHTML);
             document.getElementById("name").innerHTML = obj.patientFirstName;
-            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("insuranceid").textContent = obj.patientInsuranceId;
         }
     };
     xhttp.send(null)
