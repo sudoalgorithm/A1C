@@ -1,10 +1,4 @@
 var date = ["July, 2018","January, 2018","November, 2018"];
-
-var patientid = document.getElementById("patientid").value;
-var patientInsuranceId = document.getElementById("insuranceid").value;
-var paitentname = document.getElementById("paitentname").value;
-var dateofexpiry = document.getElementById("dateofexpiry").innerText;
-
 function makeid() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -16,13 +10,27 @@ function makeid() {
 }
 
 function onBoardPatientInsuranceCard(){
+    var patientid = document.getElementById("patientid").value;
+    var patientInsuranceId = document.getElementById("insuranceid").value;
+    var paitentname = document.getElementById("paitentname").value;
+    var dateOfExpiry = "";
+    if(patientid === "123"){
+        var dateofexpiry = document.getElementById("dateofexpiry").innerText;
+        dateOfExpiry = date[0];
+    }
+    if(patientid === "234"){
+        dateOfExpiry = date[1];
+    }
+    if(patientid === "345"){
+        dateOfExpiry = date[1];
+    }
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "http://localhost:3000/api/InsuranceCard", true);
     xhttp.setRequestHeader("Content-type","application/json");
     xhttp.send(JSON.stringify(
         {
             "$class": "org.acme.health.InsuranceCard",
-            "insuranceRequestId": patientid,
+            "insuranceRequestId": patientid, 
             "patientInsuranceId": patientInsuranceId,
             "patientFirstName": paitentname,
             "patientLastName": paitentname,
