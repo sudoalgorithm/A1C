@@ -15,8 +15,8 @@ function onBoardPatientInsuranceCard(){
     var paitentname = document.getElementById("paitentname").value;
     var dateOfExpiry = "";
     var randomblahblahblah = makeid();
-    var active = true;
-    var Inactive = false;
+    var active = "Active";
+    var Inactive = "Inactive";
     var status = "";
     if(patientid === "123"){
         dateOfExpiry = date[0];
@@ -75,8 +75,6 @@ function onBoardPatientInsuranceCard(){
             "isActive": status
           }
     ));
-    alert("Data Sent To Insurance Company"); 
-
     setTimeout(function(){
         var xhttp = new XMLHttpRequest();
         var patientInsuranceId = makeid();
