@@ -6,7 +6,7 @@ window.onload = function(){
 
 function getData(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/card",false);
+    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/123",false);
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
