@@ -30,7 +30,7 @@ function getData(){
             document.getElementById("insuranceidpr").innerHTML = obj.patientInsuranceId;
             document.getElementById("eligibilityid").value = obj.insuranceResponseId;
             document.getElementById("dateofexpiry").value = obj.dateOfExpiry;
-            if(obj.isActive === "Active"){
+            if(obj.isActive === true){
                 document.getElementById("insuranceidstatus").value = "Active"
             }else{
                 document.getElementById("insuranceidstatus").value = "In Active"
