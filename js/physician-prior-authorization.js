@@ -1,5 +1,6 @@
 window.onload = function(){
     getInsuranceStatus();
+    getData();
 }
 
 function getInsuranceStatus(){
@@ -19,6 +20,27 @@ function getInsuranceStatus(){
         }
     };
     xhttp.send();
+}
+
+function getData(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/"+queries[0].replace("param1",""),false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientnameicf").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidicf").innerHTML = obj.patientInsuranceId;
+            document.getElementById("insuranceStatus").innerHTML = obj.insuranceResponseId;
+            document.getElementById("date").innerHTML = obj.dateOfExpiry;
+            console.log(obj.isActive);
+            if(obj.isActive === true){
+                document.getElementById("insuranceResponse").innerHTML = "Active"
+            }else{
+                document.getElementById("insuranceResponse").innerHTML = "In Active"
+            }
+        }
+    };
+    xhttp.send();    
 }
 
 function sendClinicalInformation(){
