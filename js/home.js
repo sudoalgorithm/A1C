@@ -33,7 +33,7 @@ function onBoardPatientInsuranceCard(){
             "patientInsuranceId": patientInsuranceId,
             "patientFirstName": paitentname,
             "patientLastName": paitentname,
-            "dateOfExpiry": dateofexpiry
+            "dateOfExpiry": dateOfExpiry
           }
     ));
     alert("Data Sent To Insurance Company"); 
