@@ -23,22 +23,6 @@ function onBoardPatientInsuranceCard(){
             "dateOfExpiry": document.getElementById("dateofexpiry").value
           }
     ));
-         
-    setTimeout(function(){
-        var xhttp = new XMLHttpRequest();
-        var patientInsuranceId = makeid();
-        var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
-        xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
-        xhttp.setRequestHeader("Content-type","application/json");
-        xhttp.send(JSON.stringify(
-            {
-                "$class": "org.acme.health.OnboardPatientInsuranceCard",
-                "card": "resource:org.acme.health.InsuranceCard#123"
-            }
-        ));
-        alert("Data Sent To Insurance Company"); 
-    }, 5000);
-    
 }
 
 function getInsuranceStatus(){
