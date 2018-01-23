@@ -21,7 +21,7 @@ function onBoardPatientInsuranceCard(){
         dateOfExpiry = date[1];
     }
     if(patientid === "345"){
-        dateOfExpiry = date[1];
+        dateOfExpiry = date[2];
     }
     var xhttp = new XMLHttpRequest();
     xhttp.open("PUT", "http://localhost:3000/api/InsuranceCard/"+patientid,true);
