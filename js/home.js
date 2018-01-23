@@ -63,6 +63,9 @@ function getSearch(){
         document.getElementById("email").value = "aishamohammed@test.com"
         document.getElementById("patientnameicf").innerHTML = "Aisha Mohammed";
         document.getElementById("insuranceidicf").innerHTML = "AA-001-900"
+        document.getElementById("insuranceStatus").innerHTML = "Active";
+        document.getElementById("eligibilityrequestid").innerHTML = "ABCD";
+        document.getElementById("dateofexpiry").innerHTML = "July, 2018";
     }
     if(document.getElementById("patientid").value === "234"){
         document.getElementById("paitentname").value = "Aamina Ali";
@@ -74,6 +77,9 @@ function getSearch(){
         document.getElementById("email").value = "aamina.ali@test.com"
         document.getElementById("patientnameicf").innerHTML = "Aamina Ali";
         document.getElementById("insuranceidicf").innerHTML = "BB-007-600"
+        document.getElementById("insuranceStatus").innerHTML = "Active";
+        document.getElementById("eligibilityrequestid").innerHTML = "EFGH";
+        document.getElementById("dateofexpiry").innerHTML = "January, 2018";
     }
     if(document.getElementById("patientid").value === "345"){
         document.getElementById("paitentname").value = "AbdulRazzak Ahmed";
@@ -85,6 +91,9 @@ function getSearch(){
         document.getElementById("email").value = "aahmed@test.com"
         document.getElementById("patientnameicf").innerHTML = "AbdulRazzak Ahmed";
         document.getElementById("insuranceidicf").innerHTML = "CC-002-400"
+        document.getElementById("insuranceStatus").innerHTML = "Inactive";
+        document.getElementById("eligibilityrequestid").innerHTML = "IJKL"
+        document.getElementById("dateofexpiry").innerHTML = "November, 2018";
     }
     if(document.getElementById("patientid").value === "456"){
         document.getElementById("paitentname").value = "Hanifa Shaheen";
@@ -96,6 +105,9 @@ function getSearch(){
         document.getElementById("email").value = "hanifa.shaheen@test.com"
         document.getElementById("patientnameicf").innerHTML = "Hanifa Shaheen";
         document.getElementById("insuranceidicf").innerHTML = "AA-001-950"
+        document.getElementById("insuranceStatus").innerHTML = "";
+        document.getElementById("eligibilityrequestid").innerHTML = "";
+        document.getElementById("dateofexpiry").innerHTML = "";
     }
     if(document.getElementById("patientid").value === "678"){
         document.getElementById("paitentname").value = "Hakeem Hassan";
@@ -107,6 +119,12 @@ function getSearch(){
         document.getElementById("email").value = "hakeem.hassan@test.com"
         document.getElementById("patientnameicf").innerHTML = "Hakeem Hassan";
         document.getElementById("insuranceidicf").innerHTML = "BB-007-650"
+        document.getElementById("insuranceStatus").innerHTML = "Active";
+        document.getElementById("eligibilityrequestid").innerHTML = "ABCD";
+        document.getElementById("dateofexpiry").innerHTML = "July, 2018";
+        document.getElementById("insuranceStatus").innerHTML = "";
+        document.getElementById("eligibilityrequestid").innerHTML = "";
+        document.getElementById("dateofexpiry").innerHTML = "";
     }
     if(document.getElementById("patientid").value === "789"){
         document.getElementById("paitentname").value = "Hesham Osama";
@@ -118,10 +136,29 @@ function getSearch(){
         document.getElementById("email").value = "hesham.osama@test.com"
         document.getElementById("patientnameicf").innerHTML = "Hesham Osama";
         document.getElementById("insuranceidicf").innerHTML = "CC-002-450"
+        document.getElementById("insuranceStatus").innerHTML = "";
+        document.getElementById("eligibilityrequestid").innerHTML = "";
+        document.getElementById("dateofexpiry").innerHTML = "";
     }
 }
 
-function sendData(){
+function sendDataPA(){
+    console.log("SendData PA");
+    var patientid = document.getElementById("patientid").value;
+    var paitentname = document.getElementById("paitentname").value;
+    var age = document.getElementById("age").value;
+    var sex = document.getElementById("sex").value;
+    var emiratesid = document.getElementById("emiratesid").value;
+    var insuranceid = document.getElementById("insuranceid").value;
+    var contactnumber = document.getElementById("contactnumber").value;
+    var email = document.getElementById("email").value;
+
+    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
+    window.location.href = "physician-prior-authorization.html" + queryBuilder;
+}
+
+function sendDataIC(){
+    console.log("SendData PA");
     var patientid = document.getElementById("patientid").value;
     var paitentname = document.getElementById("paitentname").value;
     var age = document.getElementById("age").value;
@@ -133,4 +170,34 @@ function sendData(){
 
     queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
     window.location.href = "insurance-company.html" + queryBuilder;
+}
+
+function sendDataHCT(){
+    console.log("SendData PA");
+    var patientid = document.getElementById("patientid").value;
+    var paitentname = document.getElementById("paitentname").value;
+    var age = document.getElementById("age").value;
+    var sex = document.getElementById("sex").value;
+    var emiratesid = document.getElementById("emiratesid").value;
+    var insuranceid = document.getElementById("insuranceid").value;
+    var contactnumber = document.getElementById("contactnumber").value;
+    var email = document.getElementById("email").value;
+
+    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
+    window.location.href = "hospital-claims-teams.html" + queryBuilder;
+}
+
+function sendDataP(){
+    console.log("SendData PA");
+    var patientid = document.getElementById("patientid").value;
+    var paitentname = document.getElementById("paitentname").value;
+    var age = document.getElementById("age").value;
+    var sex = document.getElementById("sex").value;
+    var emiratesid = document.getElementById("emiratesid").value;
+    var insuranceid = document.getElementById("insuranceid").value;
+    var contactnumber = document.getElementById("contactnumber").value;
+    var email = document.getElementById("email").value;
+
+    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
+    window.location.href = "patient.html" + queryBuilder;
 }

@@ -52,7 +52,73 @@ function sendClinicalInformation(){
 }
 
 function autoFile(){
-    document.getElementById("hospitalname").value = "Hospital XYZ";
+    if(document.getElementById("hospitalid").value === "ZZ123"){
+        document.getElementById("hospitalname").value = "Test Hospital";
+        document.getElementById("patientname").value = "Aisha Mohammed";
+        document.getElementById("insuranceid").value = "AA-001-900";
+        document.getElementById("physicianname").value = "Dr Hananah";
+        document.getElementById("clinicalrequestid").value = "";
+        document.getElementById("dateofadmission").value = "01/02/2018";
+        document.getElementById("diagnosiscode").value = "E11.6";
+        document.getElementById("diagnosisdetail").value = "Type 2 diabetes mellitus with other speci- fied complications";
+        document.getElementById("lengthofstay").value = "3";
+    }
+    if(document.getElementById("hospitalid").value === "ZZ124"){
+        document.getElementById("hospitalname").value = "Block Chain Hospital";
+        document.getElementById("patientname").value = "Aamina Ali";
+        document.getElementById("insuranceid").value = "BB-007-600";
+        document.getElementById("physicianname").value = "Dr Alex";
+        document.getElementById("clinicalrequestid").value = "";
+        document.getElementById("dateofadmission").value = "02/02/2018";
+        document.getElementById("diagnosiscode").value = "E11.3219";
+        document.getElementById("diagnosisdetail").value = "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema";
+        document.getElementById("lengthofstay").value = "3";
+    }
+    if(document.getElementById("hospitalid").value === "ZZ125"){
+        document.getElementById("hospitalname").value = "Healthy Hospital";
+        document.getElementById("patientname").value = "AbdulRazzak Ahmed";
+        document.getElementById("insuranceid").value = "CC-002-400";
+        document.getElementById("physicianname").value = "Dr Kunal";
+        document.getElementById("clinicalrequestid").value = "";
+        document.getElementById("dateofadmission").value = "03/02/2018";
+        document.getElementById("diagnosiscode").value = "L30.8";
+        document.getElementById("diagnosisdetail").value = "Dermatitis, unspecified";
+        document.getElementById("lengthofstay").value = "3";
+    }
+    if(document.getElementById("hospitalid").value === "ZZ126"){
+        document.getElementById("hospitalname").value = "Multy Hospital";
+        document.getElementById("patientname").value = "Hanifa Shaheen";
+        document.getElementById("insuranceid").value = "AA-001-950";
+        document.getElementById("physicianname").value = "Dr Hananah";
+        document.getElementById("clinicalrequestid").value = "";
+        document.getElementById("dateofadmission").value = "04/02/2018";
+        document.getElementById("diagnosiscode").value = "E11.6";
+        document.getElementById("diagnosisdetail").value = "Type 2 diabetes mellitus with other speci- fied complications";
+        document.getElementById("lengthofstay").value = "3";
+    }
+    if(document.getElementById("hospitalid").value === "ZZ127"){
+        document.getElementById("hospitalname").value = "Caring Hospital";
+        document.getElementById("patientname").value = "Hakeem Hassan";
+        document.getElementById("insuranceid").value = "BB-007-650";
+        document.getElementById("physicianname").value = "Dr Alex";
+        document.getElementById("clinicalrequestid").value = "";
+        document.getElementById("dateofadmission").value = "05/02/2018";
+        document.getElementById("diagnosiscode").value = "E11.3219";
+        document.getElementById("diagnosisdetail").value = "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema";
+        document.getElementById("lengthofstay").value = "3";
+    }
+    if(document.getElementById("hospitalid").value === "ZZ128"){
+        document.getElementById("hospitalname").value = "Welfare Hospital";
+        document.getElementById("patientname").value = "Hesham Osama";
+        document.getElementById("insuranceid").value = "CC-002-450";
+        document.getElementById("physicianname").value = "Dr Kunal";
+        document.getElementById("clinicalrequestid").value = "";
+        document.getElementById("dateofadmission").value = "06/02/2018";
+        document.getElementById("diagnosiscode").value = "L30.8";
+        document.getElementById("diagnosisdetail").value = "Dermatitis, unspecified";
+        document.getElementById("lengthofstay").value = "3";
+    }
+    
 }
 
 var querryString = decodeURIComponent(window.location.search);
