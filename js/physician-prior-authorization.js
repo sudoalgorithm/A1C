@@ -62,6 +62,7 @@ function autoFile(){
         document.getElementById("diagnosiscode").value = "E11.6";
         document.getElementById("diagnosisdetail").value = "Type 2 diabetes mellitus with other speci- fied complications";
         document.getElementById("lengthofstay").value = "3";
+        document.getElementById("treatmentamount").value = "25000";
     }
     if(document.getElementById("hospitalid").value === "ZZ124"){
         document.getElementById("hospitalname").value = "Block Chain Hospital";
@@ -73,6 +74,7 @@ function autoFile(){
         document.getElementById("diagnosiscode").value = "E11.3219";
         document.getElementById("diagnosisdetail").value = "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema";
         document.getElementById("lengthofstay").value = "3";
+        document.getElementById("treatmentamount").value = "30000";
     }
     if(document.getElementById("hospitalid").value === "ZZ125"){
         document.getElementById("hospitalname").value = "Healthy Hospital";
@@ -84,6 +86,7 @@ function autoFile(){
         document.getElementById("diagnosiscode").value = "L30.8";
         document.getElementById("diagnosisdetail").value = "Dermatitis, unspecified";
         document.getElementById("lengthofstay").value = "3";
+        document.getElementById("treatmentamount").value = "15000";
     }
     if(document.getElementById("hospitalid").value === "ZZ126"){
         document.getElementById("hospitalname").value = "Multy Hospital";
@@ -95,6 +98,7 @@ function autoFile(){
         document.getElementById("diagnosiscode").value = "E11.6";
         document.getElementById("diagnosisdetail").value = "Type 2 diabetes mellitus with other speci- fied complications";
         document.getElementById("lengthofstay").value = "3";
+        document.getElementById("treatmentamount").value = "25000";
     }
     if(document.getElementById("hospitalid").value === "ZZ127"){
         document.getElementById("hospitalname").value = "Caring Hospital";
@@ -106,6 +110,7 @@ function autoFile(){
         document.getElementById("diagnosiscode").value = "E11.3219";
         document.getElementById("diagnosisdetail").value = "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema";
         document.getElementById("lengthofstay").value = "3";
+        document.getElementById("treatmentamount").value = "30000";
     }
     if(document.getElementById("hospitalid").value === "ZZ128"){
         document.getElementById("hospitalname").value = "Welfare Hospital";
@@ -117,6 +122,7 @@ function autoFile(){
         document.getElementById("diagnosiscode").value = "L30.8";
         document.getElementById("diagnosisdetail").value = "Dermatitis, unspecified";
         document.getElementById("lengthofstay").value = "3";
+        document.getElementById("treatmentamount").value = "15000";
     }
     
 }
