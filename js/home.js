@@ -66,6 +66,9 @@ function getSearch(){
         document.getElementById("insuranceStatus").innerHTML = "Active";
         document.getElementById("eligibilityrequestid").innerHTML = "ABCD";
         document.getElementById("dateofexpiry").innerHTML = "July, 2018";
+        setTimeout(function(){
+            alert("Data Sent To Physician Prior Authorization")
+        }, 1000)
     }
     if(document.getElementById("patientid").value === "234"){
         document.getElementById("paitentname").value = "Aamina Ali";
@@ -80,6 +83,9 @@ function getSearch(){
         document.getElementById("insuranceStatus").innerHTML = "Active";
         document.getElementById("eligibilityrequestid").innerHTML = "EFGH";
         document.getElementById("dateofexpiry").innerHTML = "January, 2018";
+        setTimeout(function(){
+            alert("Data Sent To Physician Prior Authorization")
+        }, 1000)
     }
     if(document.getElementById("patientid").value === "345"){
         document.getElementById("paitentname").value = "AbdulRazzak Ahmed";
@@ -94,6 +100,9 @@ function getSearch(){
         document.getElementById("insuranceStatus").innerHTML = "Inactive";
         document.getElementById("eligibilityrequestid").innerHTML = "IJKL"
         document.getElementById("dateofexpiry").innerHTML = "November, 2018";
+        setTimeout(function(){
+            alert("Data Sent To Physician Prior Authorization")
+        }, 1000)
     }
     if(document.getElementById("patientid").value === "456"){
         document.getElementById("paitentname").value = "Hanifa Shaheen";
@@ -143,7 +152,6 @@ function getSearch(){
 }
 
 function sendDataPA(){
-    console.log("SendData PA");
     var patientid = document.getElementById("patientid").value;
     var paitentname = document.getElementById("paitentname").value;
     var age = document.getElementById("age").value;
