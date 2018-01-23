@@ -1,7 +1,7 @@
 var patientid = document.getElementById("patientid").value;
 var patientInsuranceId = document.getElementById("insuranceid").value;
 var paitentname = document.getElementById("paitentname").value;
-var dateofexpiry = document.getElementById("dateofexpiry").value;
+var dateofexpiry = document.getElementById("dateofexpiry").innerHTML;
 
 function makeid() {
     var text = "";
