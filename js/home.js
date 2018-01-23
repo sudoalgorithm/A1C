@@ -33,7 +33,7 @@ function onBoardPatientInsuranceCard(){
         dateOfExpiry = " ";
     }
     var xhttp = new XMLHttpRequest();
-    xhttp.open("PUT", "http://localhost:3000/api/InsuranceCard/"+patientid,true);
+    xhttp.open("POST", "http://localhost:3000/api/InsuranceCard",true);
     xhttp.setRequestHeader("Content-type","application/json");
     xhttp.send(JSON.stringify(
         {
@@ -51,7 +51,7 @@ function onBoardPatientInsuranceCard(){
         var xhttp = new XMLHttpRequest();
         var patientInsuranceId = makeid();
         var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
-        xhttp.open("PUT", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
+        xhttp.open("POST", "http://localhost:3000/api/OnboardPatientInsuranceCard", true);
         xhttp.setRequestHeader("Content-type","application/json");
         xhttp.send(JSON.stringify(
             {
