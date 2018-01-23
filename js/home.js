@@ -99,9 +99,6 @@ function getSearch(){
         document.getElementById("insuranceStatus").innerHTML = "Active";
         document.getElementById("eligibilityrequestid").innerHTML = "ABCD";
         document.getElementById("dateofexpiry").innerHTML = date[0];
-        setTimeout(function(){
-            alert("Data Sent To Physician Prior Authorization")
-        }, 1000);
     }
     if(document.getElementById("patientid").value === "234"){
         document.getElementById("paitentname").value = "Aamina Ali";
@@ -116,9 +113,6 @@ function getSearch(){
         document.getElementById("insuranceStatus").innerHTML = "Active";
         document.getElementById("eligibilityrequestid").innerHTML = "EFGH";
         document.getElementById("dateofexpiry").innerHTML = date[1];
-        setTimeout(function(){
-            alert("Data Sent To Physician Prior Authorization")
-        }, 1000);
     }
     if(document.getElementById("patientid").value === "345"){
         document.getElementById("paitentname").value = "AbdulRazzak Ahmed";
@@ -133,9 +127,6 @@ function getSearch(){
         document.getElementById("insuranceStatus").innerHTML = "Inactive";
         document.getElementById("eligibilityrequestid").innerHTML = "IJKL"
         document.getElementById("dateofexpiry").innerHTML = date[2];
-        setTimeout(function(){
-            alert("Data Sent To Physician Prior Authorization")
-        }, 1000);
     }
     if(document.getElementById("patientid").value === "456"){
         document.getElementById("paitentname").value = "Hanifa Shaheen";
