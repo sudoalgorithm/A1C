@@ -10,7 +10,7 @@ for(var i = 0; i < queries.length; i++){
     document.getElementById("sex").innerHTML = queries[3].replace("param4","");
     document.getElementById("emiratesid").innerHTML = queries[4].replace("param5","");
     document.getElementById("insuranceid").innerHTML = queries[5].replace("param6","");
-    document.getElementById("contactnumber").innerHTML = queries[6].replace("param","");
+    document.getElementById("contactnumber").innerHTML = queries[6].replace("param6","");
     document.getElementById("visittype").innerHTML = "Inpatient"
     document.getElementById("email").innerHTML = queries[7].replace("param7","");
 }
