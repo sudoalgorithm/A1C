@@ -1,3 +1,7 @@
+var querryString = decodeURIComponent(window.location.search);
+querryString = querryString.substring(1);
+var queries = querryString.split("&");
+
 function getData(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/"+queries[0].replace("param1",""),false);

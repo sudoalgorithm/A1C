@@ -1,3 +1,7 @@
+var querryString = decodeURIComponent(window.location.search);
+querryString = querryString.substring(1);
+var queries = querryString.split("&");
+
 var date = ["July, 2018","October, 2018","November, 2018"];
 function makeid() {
     var text = "";
@@ -193,4 +197,30 @@ function getSearch(){
     
     }, 3000);
 }
+
+function sendDataPA(){
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid; 
+    window.location.href = "physician-prior-authorization.html" + queryBuilder;
+}
+
+function sendDataIC(){
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
+    window.location.href = "insurance-company.html" + queryBuilder;
+}
+
+function sendDataHCT(){
+    
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
+    window.location.href = "hospital-claims-teams.html" + queryBuilder;
+}
+
+function sendDataP(){
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
+    window.location.href = "patient.html" + queryBuilder;
+}
+
 
