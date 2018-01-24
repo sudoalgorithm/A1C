@@ -132,7 +132,6 @@ function sendDataIC(){
 }
 
 function sendDataHome(){
-    
     var patientid = document.getElementById("patientid").value;
     queryBuilder = "?param1" + patientid;
     window.location.href = "home.html" + queryBuilder;
