@@ -1,8 +1,5 @@
-var querryString = decodeURIComponent(window.location.search);
-querryString = querryString.substring(1);
-var queries = querryString.split("&");
-
 var date = ["July, 2018","October, 2018","November, 2018"];
+
 function makeid() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -191,7 +188,7 @@ function getSearch(){
             "patientContactNumber": document.getElementById("contactnumber").value,
             "patientEmailId": document.getElementById("email").value,
             "patientVisitType": "Inpatient",
-            "date": date[0]
+            "date": "July, 2018"
             }
         ));
     
