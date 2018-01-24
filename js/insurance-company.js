@@ -31,13 +31,13 @@ function getPatientData(){
             var obj = JSON.parse(this.responseText);
             document.getElementById("patientid").innerHTML = obj.patientId;
             document.getElementById("patientname").innerHTML = obj.patientFirstName;
-            document.getElementById("age").value = obj.patientAge;
-            document.getElementById("sex").value = obj.patientGender;
-            document.getElementById("emiratesid").value = obj.patientEmiratesId;
-            document.getElementById("insuranceid").value = obj.patientInsuranceId;
-            document.getElementById("contactnumber").value = obj.patientContactNumber;
-            document.getElementById("visittype").value = obj.patientVisitType;
-            document.getElementById("email").value = obj.patientEmailId;
+            document.getElementById("age").innerHTML = obj.patientAge;
+            document.getElementById("sex").innerHTML = obj.patientGender;
+            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
+            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
+            document.getElementById("visittype").innerHTML = obj.patientVisitType;
+            document.getElementById("email").innerHTML = obj.patientEmailId;
             
         }
     };
