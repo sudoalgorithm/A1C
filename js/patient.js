@@ -7,6 +7,7 @@ document.body.onload = function(){
     getPatientData5();
     getPatientData6();
 }
+
 function getPatientData(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/123",false);
@@ -154,6 +155,128 @@ function getPatientData6(){
         }
     };
     xhttp.send();
+}
+
+function getClinicalInformation(){
+    var Approved = true;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ123", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        if(obj.isApproved === Approved){
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                            document.getElementById("reason").innerHTML = "Send detailed clinical info along with the claims.";
+                        }else{
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                            document.getElementById("reason").innerHTML = "This treatment is not covered by insured policy.";
+                        }
+                         
+                }
+                
+    };
+    xhttp.send();
+
+}
+
+function getClinicalInformation1(){
+    var Approved = true;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ124", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        if(obj.isApproved === Approved){
+                            document.getElementById("requeststatus").innerHTML = "Approved.";                            
+                        }else{
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+
+                        }
+                }
+                
+    };
+    xhttp.send();
+
+}
+function getClinicalInformation2(){
+    var Approved = false;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ125", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        if(obj.isApproved === Approved){
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                        }else{
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                        }
+                }
+                
+    };
+
+    xhttp.send();
+
+}
+function getClinicalInformation3(){
+    var Approved = true;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ126", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        if(obj.isApproved === Approved){
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                        }else{
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                        }
+                    
+                    
+                }
+                
+    };
+    xhttp.send();
+
+}
+function getClinicalInformation4(){
+    var Approved = true;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ127", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        if(obj.isApproved === Approved){
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                            
+                        }else{
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                        }
+                        
+                    
+                    
+                }
+                
+    };
+    xhttp.send();
+
+}
+function getClinicalInformation5(){
+    var Approved = false;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ128", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        if(obj.isApproved === Approved){
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                        }else{
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                        }
+
+                    }
+                
+    };
+    xhttp.send();
+
 }
 
 function sendDataPA(){
