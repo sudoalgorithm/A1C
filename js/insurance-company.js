@@ -369,13 +369,13 @@ function getClinicalInformation(){
     xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         var obj = JSON.parse(this.responseText);
-                        document.getElementById("hospitalid").innerHTML = obj[0].hospitalId;
-                        document.getElementById("hospitalname").innerHTML = obj[0].hospitalName;
-                        document.getElementById("physicianname").innerHTML = obj[0].physicianId;
-                        document.getElementById("diagnosiscode").innerHTML = obj[0].diagnosisCode;
-                        document.getElementById("diagnosisdetail").innerHTML = obj[0].diagnosisDescription;
-                        document.getElementById("lengthofstay").innerHTML = obj[0].lengthOfStay;
-                        document.getElementById("treatmentamount").innerHTML = obj[0].requestedTreatmentAmount;
+                        document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                        document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                        document.getElementById("physicianname").innerHTML = obj.physicianId;
+                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                        document.getElementById("diagnosisdetail").innerHTML = obj.diagnosisDescription;
+                        document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+                        document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
                     
                     
                 }
@@ -390,13 +390,13 @@ function getClinicalInformation1(){
     xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         var obj = JSON.parse(this.responseText);
-                        document.getElementById("hospitalid").innerHTML = obj[1].hospitalId;
-                        document.getElementById("hospitalname").innerHTML = obj[1].hospitalName;
-                        document.getElementById("physicianname").innerHTML = obj[1].physicianId;
-                        document.getElementById("diagnosiscode").innerHTML = obj[1].diagnosisCode;
-                        document.getElementById("diagnosisdetail").innerHTML = obj[1].diagnosisDescription;
-                        document.getElementById("lengthofstay").innerHTML = obj[1].lengthOfStay;
-                        document.getElementById("treatmentamount").innerHTML = obj[1].requestedTreatmentAmount;
+                        document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                        document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                        document.getElementById("physicianname").innerHTML = obj.physicianId;
+                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                        document.getElementById("diagnosisdetail").innerHTML = obj.diagnosisDescription;
+                        document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+                        document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
                     
                     
                 }
