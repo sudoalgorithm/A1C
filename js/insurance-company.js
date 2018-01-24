@@ -354,6 +354,155 @@ function getClinicalInformation(){
     xhttp.send();
 
 }
+function getClinicalInformation(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ234", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                        document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                        document.getElementById("physicianname").innerHTML = obj.physicianId;
+                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                        document.getElementById("diagnosisdetail").innerHTML = obj.diagnosisDescription;
+                        document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+                        document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                    
+                    
+                }
+                
+    };
+    xhttp.send();
+
+}
+function getClinicalInformation(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ345", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                        document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                        document.getElementById("physicianname").innerHTML = obj.physicianId;
+                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                        document.getElementById("diagnosisdetail").innerHTML = obj.diagnosisDescription;
+                        document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+                        document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                    
+                    
+                }
+                
+    };
+    xhttp.send();
+
+}
+function getClinicalInformation(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ456", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                        document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                        document.getElementById("physicianname").innerHTML = obj.physicianId;
+                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                        document.getElementById("diagnosisdetail").innerHTML = obj.diagnosisDescription;
+                        document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+                        document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                    
+                    
+                }
+                
+    };
+    xhttp.send();
+
+}
+function getClinicalInformation(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ567", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                        document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                        document.getElementById("physicianname").innerHTML = obj.physicianId;
+                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                        document.getElementById("diagnosisdetail").innerHTML = obj.diagnosisDescription;
+                        document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+                        document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                    
+                    
+                }
+                
+    };
+    xhttp.send();
+
+}
+function getClinicalInformation(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ678", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                        document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                        document.getElementById("physicianname").innerHTML = obj.physicianId;
+                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                        document.getElementById("diagnosisdetail").innerHTML = obj.diagnosisDescription;
+                        document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+                        document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                    
+                    
+                }
+                
+    };
+    xhttp.send();
+
+}
+
+function getClinicalInformation(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ678", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                        document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                        document.getElementById("physicianname").innerHTML = obj.physicianId;
+                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                        document.getElementById("diagnosisdetail").innerHTML = obj.diagnosisDescription;
+                        document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+                        document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                    
+                    
+                }
+                
+    };
+    xhttp.send();
+
+}
+
+function getClinicalInformation(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ789", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("hospitalid").innerHTML = obj.hospitalId;
+                        document.getElementById("hospitalname").innerHTML = obj.hospitalName;
+                        document.getElementById("physicianname").innerHTML = obj.physicianId;
+                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
+                        document.getElementById("diagnosisdetail").innerHTML = obj.diagnosisDescription;
+                        document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
+                        document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                    
+                    
+                }
+                
+    };
+    xhttp.send();
+
+}
 
 function sendInsuranceCompany(){
     var xhttp = new XMLHttpRequest();
