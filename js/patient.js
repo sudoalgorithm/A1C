@@ -1,16 +1,22 @@
 document.body.onload = function(){
     getPatientData();
     getClinicalInformation();
+    getAmount();
     getPatientData1();
     getClinicalInformation1();
+    getAmount1();
     getPatientData2();
     getClinicalInformation2();
+    getAmount2();
     getPatientData3();
     getClinicalInformation3();
+    getAmount3();
     getPatientData4();
     getClinicalInformation4();
+    getAmount4();
     getPatientData5();
     getClinicalInformation5();
+    getAmount5();
 }
 
 function getPatientData(){
@@ -276,6 +282,133 @@ function getClinicalInformation5(){
                         }else{
                             document.getElementById("requeststatus").innerHTML = "Reject.";
                         }
+
+                    }
+                
+    };
+    xhttp.send();
+
+}
+
+function getClinicalInformation5(){
+    var Approved = false;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ128", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        if(obj.isApproved === Approved){
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                        }else{
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                        }
+
+                    }
+                
+    };
+    xhttp.send();
+
+}
+
+function getAmount(){
+    var Approved = false;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/123", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                            document.getElementById("requestedtreatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                            document.getElementById("finalamount").innerHTML = obj.requestedTreatmentAmount;
+                    }
+                
+    };
+    xhttp.send();
+
+}
+
+function getAmount1(){
+    var Approved = false;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/234", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("requestedtreatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                        document.getElementById("finalamount").innerHTML = obj.requestedTreatmentAmount;
+
+                    }
+                
+    };
+    xhttp.send();
+
+}
+
+function getAmount2(){
+    var Approved = false;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/345", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        if(obj.isApproved === Approved){
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                        }else{
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                        }
+
+                    }
+                
+    };
+    xhttp.send();
+
+}
+
+
+function getAmount3(){
+    var Approved = false;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/456", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("requestedtreatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                        document.getElementById("finalamount").innerHTML = obj.requestedTreatmentAmount;
+
+                    }
+                
+    };
+    xhttp.send();
+
+}
+
+
+function getAmount4(){
+    var Approved = false;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/567", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("requestedtreatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                        document.getElementById("finalamount").innerHTML = obj.requestedTreatmentAmount;
+
+                    }
+                
+    };
+    xhttp.send();
+
+}
+
+
+function getAmount5(){
+    var Approved = false;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/678", false);
+    xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        document.getElementById("requestedtreatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                        document.getElementById("finalamount").innerHTML = obj.requestedTreatmentAmount;
 
                     }
                 
