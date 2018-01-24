@@ -220,4 +220,8 @@ function sendDataP(){
     window.location.href = "patient.html" + queryBuilder;
 }
 
+var getId = document.getElementById("patientid").value;
+localStorage.setItem("patientid", getId);
+
+
 

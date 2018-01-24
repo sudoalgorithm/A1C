@@ -4,7 +4,7 @@ var queries = querryString.split("&");
 
 function getData(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/"+queries[0].replace("param1",""),false);
+    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/"+localStorage.getItem("patientid"),false);
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
@@ -25,7 +25,7 @@ function getData(){
 
 function getPatientData(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/"+queries[0].replace("param1",""),false);
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/"+localStorage.getItem("patientid"),false);
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
@@ -69,7 +69,7 @@ function sendData(){
 
 function getClinicalInformation(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/Dr Hananah", false);
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ123", false);
     xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         var obj = JSON.parse(this.responseText);
