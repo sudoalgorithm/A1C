@@ -69,7 +69,7 @@ function sendData(){
 
 function getClinicalInformation(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/123", false);
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/Dr Hananah", false);
     xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         var obj = JSON.parse(this.responseText);
