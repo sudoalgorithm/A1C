@@ -46,6 +46,270 @@ function getPatientData(){
     xhttp.send();
 }
 
+function getData1(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/234",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("name").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidpr").innerHTML = obj.patientInsuranceId;
+            document.getElementById("eligibilityid").value = obj.insuranceResponseId;
+            document.getElementById("dateofexpiry").value = obj.dateOfExpiry;
+            console.log(obj.isActive);
+            if(obj.isActive === "Active"){
+                document.getElementById("insuranceidstatus").value = "Active"
+            }else{
+                document.getElementById("insuranceidstatus").value = "In Active"
+            }
+        }
+    };
+    xhttp.send();
+}
+
+function getPatientData1(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/234",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            document.getElementById("age").innerHTML = obj.patientAge;
+            document.getElementById("sex").innerHTML = obj.patientGender;
+            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
+            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
+            document.getElementById("visittype").innerHTML = obj.patientVisitType;
+            document.getElementById("email").innerHTML = obj.patientEmailId;
+            document.getElementById("patientnameci").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidci").innerHTML = obj.patientInsuranceId;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getData2(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/345",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("name").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidpr").innerHTML = obj.patientInsuranceId;
+            document.getElementById("eligibilityid").value = obj.insuranceResponseId;
+            document.getElementById("dateofexpiry").value = obj.dateOfExpiry;
+            console.log(obj.isActive);
+            if(obj.isActive === "Active"){
+                document.getElementById("insuranceidstatus").value = "Active"
+            }else{
+                document.getElementById("insuranceidstatus").value = "In Active"
+            }
+        }
+    };
+    xhttp.send();
+}
+
+function getPatientData2(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/345",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            document.getElementById("age").innerHTML = obj.patientAge;
+            document.getElementById("sex").innerHTML = obj.patientGender;
+            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
+            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
+            document.getElementById("visittype").innerHTML = obj.patientVisitType;
+            document.getElementById("email").innerHTML = obj.patientEmailId;
+            document.getElementById("patientnameci").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidci").innerHTML = obj.patientInsuranceId;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getData3(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/456",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("name").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidpr").innerHTML = obj.patientInsuranceId;
+            document.getElementById("eligibilityid").value = obj.insuranceResponseId;
+            document.getElementById("dateofexpiry").value = obj.dateOfExpiry;
+            console.log(obj.isActive);
+            if(obj.isActive === "Active"){
+                document.getElementById("insuranceidstatus").value = "Active"
+            }else{
+                document.getElementById("insuranceidstatus").value = "In Active"
+            }
+        }
+    };
+    xhttp.send();
+}
+
+function getPatientData3(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/456",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            document.getElementById("age").innerHTML = obj.patientAge;
+            document.getElementById("sex").innerHTML = obj.patientGender;
+            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
+            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
+            document.getElementById("visittype").innerHTML = obj.patientVisitType;
+            document.getElementById("email").innerHTML = obj.patientEmailId;
+            document.getElementById("patientnameci").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidci").innerHTML = obj.patientInsuranceId;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getData4(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/567",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("name").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidpr").innerHTML = obj.patientInsuranceId;
+            document.getElementById("eligibilityid").value = obj.insuranceResponseId;
+            document.getElementById("dateofexpiry").value = obj.dateOfExpiry;
+            console.log(obj.isActive);
+            if(obj.isActive === "Active"){
+                document.getElementById("insuranceidstatus").value = "Active"
+            }else{
+                document.getElementById("insuranceidstatus").value = "In Active"
+            }
+        }
+    };
+    xhttp.send();
+}
+
+function getPatientData4(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/567",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            document.getElementById("age").innerHTML = obj.patientAge;
+            document.getElementById("sex").innerHTML = obj.patientGender;
+            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
+            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
+            document.getElementById("visittype").innerHTML = obj.patientVisitType;
+            document.getElementById("email").innerHTML = obj.patientEmailId;
+            document.getElementById("patientnameci").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidci").innerHTML = obj.patientInsuranceId;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getData5(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/678",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("name").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidpr").innerHTML = obj.patientInsuranceId;
+            document.getElementById("eligibilityid").value = obj.insuranceResponseId;
+            document.getElementById("dateofexpiry").value = obj.dateOfExpiry;
+            console.log(obj.isActive);
+            if(obj.isActive === "Active"){
+                document.getElementById("insuranceidstatus").value = "Active"
+            }else{
+                document.getElementById("insuranceidstatus").value = "In Active"
+            }
+        }
+    };
+    xhttp.send();
+}
+
+function getPatientData5(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/678",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            document.getElementById("age").innerHTML = obj.patientAge;
+            document.getElementById("sex").innerHTML = obj.patientGender;
+            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
+            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
+            document.getElementById("visittype").innerHTML = obj.patientVisitType;
+            document.getElementById("email").innerHTML = obj.patientEmailId;
+            document.getElementById("patientnameci").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidci").innerHTML = obj.patientInsuranceId;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getData6(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/678",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("name").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidpr").innerHTML = obj.patientInsuranceId;
+            document.getElementById("eligibilityid").value = obj.insuranceResponseId;
+            document.getElementById("dateofexpiry").value = obj.dateOfExpiry;
+            console.log(obj.isActive);
+            if(obj.isActive === "Active"){
+                document.getElementById("insuranceidstatus").value = "Active"
+            }else{
+                document.getElementById("insuranceidstatus").value = "In Active"
+            }
+        }
+    };
+    xhttp.send();
+}
+
+function getPatientData6(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/678",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            document.getElementById("age").innerHTML = obj.patientAge;
+            document.getElementById("sex").innerHTML = obj.patientGender;
+            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
+            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
+            document.getElementById("visittype").innerHTML = obj.patientVisitType;
+            document.getElementById("email").innerHTML = obj.patientEmailId;
+            document.getElementById("patientnameci").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidci").innerHTML = obj.patientInsuranceId;
+            
+        }
+    };
+    xhttp.send();
+}
+
 function sendData(){
     var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
     var xhttp = new XMLHttpRequest();
