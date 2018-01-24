@@ -21,10 +21,6 @@ document.body.onload = function(){
     getData5(); 
     getPatientData5();
     getResponse5();
-    getData6(); 
-    getPatientData6();
-    getResponse6();
-
 }
 
 function getData(){
@@ -403,6 +399,7 @@ function getResponse5(){
     };
     xhttp.send();
 }
+
 function sendClinicalInformation(){
     var hospitalid = document.getElementById("hospitalid").value;
     var hospitalname = document.getElementById("hospitalname").value;
