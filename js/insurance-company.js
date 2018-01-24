@@ -354,7 +354,7 @@ function getClinicalInformation(){
     xhttp.send();
 
 }
-function getClinicalInformation(){
+function getClinicalInformation1(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ234", false);
     xhttp.onreadystatechange = function() {
@@ -375,7 +375,7 @@ function getClinicalInformation(){
     xhttp.send();
 
 }
-function getClinicalInformation(){
+function getClinicalInformation2(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ345", false);
     xhttp.onreadystatechange = function() {
@@ -396,7 +396,7 @@ function getClinicalInformation(){
     xhttp.send();
 
 }
-function getClinicalInformation(){
+function getClinicalInformation3(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ456", false);
     xhttp.onreadystatechange = function() {
@@ -417,7 +417,7 @@ function getClinicalInformation(){
     xhttp.send();
 
 }
-function getClinicalInformation(){
+function getClinicalInformation4(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ567", false);
     xhttp.onreadystatechange = function() {
@@ -438,7 +438,7 @@ function getClinicalInformation(){
     xhttp.send();
 
 }
-function getClinicalInformation(){
+function getClinicalInformation5(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ678", false);
     xhttp.onreadystatechange = function() {
@@ -460,7 +460,7 @@ function getClinicalInformation(){
 
 }
 
-function getClinicalInformation(){
+function getClinicalInformation6(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ678", false);
     xhttp.onreadystatechange = function() {
@@ -482,7 +482,7 @@ function getClinicalInformation(){
 
 }
 
-function getClinicalInformation(){
+function getClinicalInformation7(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ789", false);
     xhttp.onreadystatechange = function() {
