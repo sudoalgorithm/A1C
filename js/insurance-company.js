@@ -378,9 +378,11 @@ function getClinicalInformation(){
                         document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
                         document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
                         if(obj.isApproved === Approved){
-                            document.getElementById("requeststatus").innerHTML = "Approved.Send detailed clinical info along with the claims";
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                            document.getElementById("reason").innerHTML = "Send detailed clinical info along with the claims.";
                         }else{
-                            document.getElementById("requeststatus").innerHTML = "Reject.This treatment is not covered by insured policy";
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                            document.getElementById("reason").innerHTML = "This treatment is not covered by insured policy.";
                         }
                          
                 }
@@ -404,9 +406,11 @@ function getClinicalInformation1(){
                         document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
                         document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
                         if(obj.isApproved === Approved){
-                            document.getElementById("requeststatus").innerHTML = "Approved.Send detailed clinical info along with the claims";
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                            document.getElementById("reason").innerHTML = "Send detailed clinical info along with the claims.";
                         }else{
-                            document.getElementById("requeststatus").innerHTML = "Reject.This treatment is not covered by insured policy";
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                            document.getElementById("reason").innerHTML = "This treatment is not covered by insured policy.";
                         }
                 }
                 
@@ -429,9 +433,11 @@ function getClinicalInformation2(){
                         document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
                         document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
                         if(obj.isApproved === Approved){
-                            document.getElementById("requeststatus").innerHTML = "Approved.Send detailed clinical info along with the claims";
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                            document.getElementById("reason").innerHTML = "Send detailed clinical info along with the claims.";
                         }else{
-                            document.getElementById("requeststatus").innerHTML = "Reject.This treatment is not covered by insured policy";
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                            document.getElementById("reason").innerHTML = "This treatment is not covered by insured policy.";
                         }
                 }
                 
@@ -455,9 +461,11 @@ function getClinicalInformation3(){
                         document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
                         document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
                         if(obj.isApproved === Approved){
-                            document.getElementById("requeststatus").innerHTML = "Approved.Send detailed clinical info along with the claims";
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                            document.getElementById("reason").innerHTML = "Send detailed clinical info along with the claims.";
                         }else{
                             document.getElementById("requeststatus").innerHTML = "Reject.This treatment is not covered by insured policy";
+                            document.getElementById("reason").innerHTML = "This treatment is not covered by insured policy.";
                         }
                     
                     
@@ -482,10 +490,13 @@ function getClinicalInformation4(){
                         document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
                         document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
                         if(obj.isApproved === Approved){
-                            document.getElementById("requeststatus").innerHTML = "Approved.Send detailed clinical info along with the claims";
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                            document.getElementById("reason").innerHTML = "Send detailed clinical info along with the claims.";
                         }else{
-                            document.getElementById("requeststatus").innerHTML = "Reject.This treatment is not covered by insured policy";
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                            document.getElementById("reason").innerHTML = "This treatment is not covered by insured policy.";
                         }
+                        
                     
                     
                 }
@@ -509,10 +520,13 @@ function getClinicalInformation5(){
                         document.getElementById("lengthofstay").innerHTML = obj.lengthOfStay;
                         document.getElementById("treatmentamount").innerHTML = obj.requestedTreatmentAmount;
                         if(obj.isApproved === Approved){
-                            document.getElementById("requeststatus").innerHTML = "Approved.Send detailed clinical info along with the claims";
+                            document.getElementById("requeststatus").innerHTML = "Approved.";
+                            document.getElementById("reason").innerHTML = "Send detailed clinical info along with the claims.";
                         }else{
-                            document.getElementById("requeststatus").innerHTML = "Reject.This treatment is not covered by insured policy";
+                            document.getElementById("requeststatus").innerHTML = "Reject.";
+                            document.getElementById("reason").innerHTML = "This treatment is not covered by insured policy."
                         }
+
                     }
                 
     };
