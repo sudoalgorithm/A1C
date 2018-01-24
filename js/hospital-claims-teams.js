@@ -94,3 +94,5 @@ function getResponseInformation(){
     xhttp.send();
 }
 
+
+

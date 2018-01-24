@@ -124,3 +124,4 @@ function getClaimsInfromation(){
     xhttp.send();
 }
 
+

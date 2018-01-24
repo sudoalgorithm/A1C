@@ -92,27 +92,6 @@ function onBoardPatientInsuranceCard(){
     }, 5000);
 }
 
-function getInsuranceStatus(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/CoverageDetails", false);
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-        var obj = JSON.parse(this.responseText);
-        if(obj[0].isCovered === true){
-            document.getElementById("insuranceStatus").innerHTML = "Covered";
-        }else{
-            document.getElementById("insuranceStatus").innerHTML = "Not Covered";
-        }
-        
-    }
-    
-    };
-    xhttp.send();
-    }
-
-window.onload = function(){
-    getInsuranceStatus();
-}
 
 function getSearch(){
     if(document.getElementById("patientid").value === "123"){
@@ -190,63 +169,27 @@ function getSearch(){
         document.getElementById("insuranceidicf").innerHTML = "CC-002-450"
         
     }
-}
 
-function sendDataPA(){
-    var patientid = document.getElementById("patientid").value;
-    var paitentname = document.getElementById("paitentname").value;
-    var age = document.getElementById("age").value;
-    var sex = document.getElementById("sex").value;
-    var emiratesid = document.getElementById("emiratesid").value;
-    var insuranceid = document.getElementById("insuranceid").value;
-    var contactnumber = document.getElementById("contactnumber").value;
-    var email = document.getElementById("email").value;
-
-    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
-    window.location.href = "physician-prior-authorization.html" + queryBuilder;
-}
-
-function sendDataIC(){
-    console.log("SendData PA");
-    var patientid = document.getElementById("patientid").value;
-    var paitentname = document.getElementById("paitentname").value;
-    var age = document.getElementById("age").value;
-    var sex = document.getElementById("sex").value;
-    var emiratesid = document.getElementById("emiratesid").value;
-    var insuranceid = document.getElementById("insuranceid").value;
-    var contactnumber = document.getElementById("contactnumber").value;
-    var email = document.getElementById("email").value;
-
-    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
-    window.location.href = "insurance-company.html" + queryBuilder;
-}
-
-function sendDataHCT(){
-    console.log("SendData PA");
-    var patientid = document.getElementById("patientid").value;
-    var paitentname = document.getElementById("paitentname").value;
-    var age = document.getElementById("age").value;
-    var sex = document.getElementById("sex").value;
-    var emiratesid = document.getElementById("emiratesid").value;
-    var insuranceid = document.getElementById("insuranceid").value;
-    var contactnumber = document.getElementById("contactnumber").value;
-    var email = document.getElementById("email").value;
-
-    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
-    window.location.href = "hospital-claims-teams.html" + queryBuilder;
-}
-
-function sendDataP(){
-    console.log("SendData PA");
-    var patientid = document.getElementById("patientid").value;
-    var paitentname = document.getElementById("paitentname").value;
-    var age = document.getElementById("age").value;
-    var sex = document.getElementById("sex").value;
-    var emiratesid = document.getElementById("emiratesid").value;
-    var insuranceid = document.getElementById("insuranceid").value;
-    var contactnumber = document.getElementById("contactnumber").value;
-    var email = document.getElementById("email").value;
-
-    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
-    window.location.href = "patient.html" + queryBuilder;
+    setTimeout(function(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "http://localhost:3000/api/PatientRecord", true);
+        xhttp.setRequestHeader("Content-type","application/json");
+        xhttp.send(JSON.stringify( 
+            {
+            "$class": "org.acme.health.PatientRecord",
+            "patientId": document.getElementById("patientid").value,
+            "patientFirstName": document.getElementById("paitentname").value,
+            "patientLastName": document.getElementById("paitentname").value,
+            "patientAge": document.getElementById("age").value,
+            "patientGender": document.getElementById("sex").value,
+            "patientEmiratesId": document.getElementById("emiratesid").value,
+            "patientInsuranceId": document.getElementById("insuranceid").value,
+            "patientContactNumber": document.getElementById("contactnumber").value,
+            "patientEmailId": document.getElementById("email").value,
+            "patientVisitType": "Inpatient",
+            "dateOfExpiry": date[0]
+            }
+        ));
+    
+    }, 5000);
 }
