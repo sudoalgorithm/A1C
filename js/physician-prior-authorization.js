@@ -61,8 +61,6 @@ function sendClinicalInformation(){
     xhttp.open("POST", "http://localhost:3000/api/ClinicalAsset", true);
     xhttp.setRequestHeader("Content-type","application/json");
     xhttp.send(JSON.stringify({
-        "$class": "org.acme.health.IssuePriorAuthorization",
-        "clinical": {
             "$class": "org.acme.health.ClinicalAsset",
             "physicianId": physicianname,
             "hospitalId": hospitalid,
@@ -72,7 +70,6 @@ function sendClinicalInformation(){
             "diagnosisDescription": diagnosisdetail,
             "lengthOfStay": lengthofstay,
             "requestedTreatmentAmount": treatmentamount
-        }
         }));
     alert("Data Send To Insurance Company");    
 }
