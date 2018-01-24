@@ -295,9 +295,9 @@ function getPatientData5(){
     xhttp.send();
 }
 
-function getData6(){
+function getData5(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/678",false);
+    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/789",false);
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
@@ -316,9 +316,9 @@ function getData6(){
     xhttp.send();
 }
 
-function getPatientData6(){
+function getPatientData5(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/678",false);
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/789",false);
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
@@ -338,6 +338,7 @@ function getPatientData6(){
     };
     xhttp.send();
 }
+
 
 function sendData(){
     var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
@@ -362,7 +363,7 @@ function sendData(){
     alert("Please Data Sent To Prior Authorization"); 
 }
 
-function getClinicalInformation1(){
+function getClinicalInformation(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ123", false);
     xhttp.onreadystatechange = function() {
@@ -510,23 +511,6 @@ function sendInsuranceCompany(){
     ));
     alert("Data Sent To Hospital Claims Team");
      
-}
-
-function getClaimsInfromation(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset", false);
-    xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        var obj = JSON.parse(this.responseText);
-                        document.getElementById("claimsRequestid").innerHTML = obj.claimsRequestId;
-                        document.getElementById("diagnosiscode").innerHTML = obj.diagnosisCode;
-                        document.getElementById("loincode").innerHTML = obj.loincCode;
-                        document.getElementById("cptcode").innerHTML = obj.cptCode;
-                        document.getElementById("amount").innerHTML = obj.amount;  
-                }
-                
-    };
-    xhttp.send();
 }
 
 function sendDataPA(){
