@@ -363,7 +363,7 @@ function sendData(){
     alert("Please Data Sent To Prior Authorization"); 
 }
 
-function getClinicalInformation(){
+function getClaimsInfromation(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ123", false);
     xhttp.onreadystatechange = function() {
