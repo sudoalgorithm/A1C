@@ -1,6 +1,7 @@
 var querryString = decodeURIComponent(window.location.search);
 querryString = querryString.substring(1);
 var queries = querryString.split("&");
+var getElementById = "";
 
 function getData(){
     var xhttp = new XMLHttpRequest();
@@ -38,6 +39,7 @@ function getPatientData(){
             document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
             document.getElementById("visittype").innerHTML = obj.patientVisitType;
             document.getElementById("email").innerHTML = obj.patientEmailId;
+            getElementById = obj.patientId;
             
         }
     };
@@ -152,27 +154,22 @@ function autoFile(){
 }
 
 function sendDataHome(){
-    var patientid = document.getElementById("patientid").value;
-    queryBuilder = "?param1" + patientid; 
+    queryBuilder = "?param1" + getElementById; 
     window.location.href = "home.html" + queryBuilder;
 }
 
 function sendDataIC(){
-    var patientid = document.getElementById("patientid").value;
-    queryBuilder = "?param1" + patientid;
+    queryBuilder = "?param1" + getElementById;
     window.location.href = "insurance-company.html" + queryBuilder;
 }
 
 function sendDataHCT(){
-    
-    var patientid = document.getElementById("patientid").value;
-    queryBuilder = "?param1" + patientid;
+    queryBuilder = "?param1" + getElementById;
     window.location.href = "hospital-claims-teams.html" + queryBuilder;
 }
 
 function sendDataP(){
-    var patientid = document.getElementById("patientid").value;
-    queryBuilder = "?param1" + patientid;
+    queryBuilder = "?param1" + getElementById;
     window.location.href = "patient.html" + queryBuilder;
 }
 
