@@ -1,11 +1,16 @@
 document.body.onload = function(){
     getPatientData();
+    getClinicalInformation();
     getPatientData1();
+    getClinicalInformation1();
     getPatientData2();
+    getClinicalInformation2();
     getPatientData3();
+    getClinicalInformation3();
     getPatientData4();
+    getClinicalInformation4();
     getPatientData5();
-    getPatientData6();
+    getClinicalInformation5();
 }
 
 function getPatientData(){
