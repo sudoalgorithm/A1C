@@ -5,18 +5,26 @@ var queries = querryString.split("&");
 document.body.onload = function(){
     getData(); 
     getPatientData();
+    getResponse();
     getData1(); 
     getPatientData1();
+    getResponse1();
     getData2(); 
     getPatientData2();
+    getResponse2();
     getData3(); 
     getPatientData3();
+    getResponse3();
     getData4(); 
     getPatientData4();
+    getResponse4();
     getData5(); 
     getPatientData5();
+    getResponse5();
     getData6(); 
     getPatientData6();
+    getResponse6();
+
 }
 
 function getData(){
@@ -232,15 +240,6 @@ function getData6(){
     xhttp.send();    
 }
 
-
-
-
-
-
-
-
-
-
 function getPatientData3(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/456",false);
@@ -327,6 +326,103 @@ function getPatientData6(){
     xhttp.send();
 }
 
+function getResponse(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/123",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getResponse1(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/234",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getResponse2(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/345",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getResponse3(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/456",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getResponse4(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/567",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getResponse5(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/678",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            
+        }
+    };
+    xhttp.send();
+}
+
+function getResponse6(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/789",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            
+        }
+    };
+    xhttp.send();
+}
 
 function sendClinicalInformation(){
     var hospitalid = document.getElementById("hospitalid").value;
