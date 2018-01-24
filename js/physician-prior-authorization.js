@@ -151,3 +151,28 @@ function autoFile(){
     
 }
 
+function sendDataHome(){
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid; 
+    window.location.href = "home.html" + queryBuilder;
+}
+
+function sendDataIC(){
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid;
+    window.location.href = "insurance-company.html" + queryBuilder;
+}
+
+function sendDataHCT(){
+    
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid;
+    window.location.href = "hospital-claims-teams.html" + queryBuilder;
+}
+
+function sendDataP(){
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid;
+    window.location.href = "patient.html" + queryBuilder;
+}
+

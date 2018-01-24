@@ -119,5 +119,30 @@ function getResponseInformation(){
     xhttp.send();
 }
 
+function sendDataPA(){
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid; 
+    window.location.href = "physician-prior-authorization.html" + queryBuilder;
+}
+
+function sendDataIC(){
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid;    
+    window.location.href = "insurance-company.html" + queryBuilder;
+}
+
+function sendDataHome(){
+    
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid;
+    window.location.href = "home.html" + queryBuilder;
+}
+
+function sendDataP(){
+    var patientid = document.getElementById("patientid").value;
+    queryBuilder = "?param1" + patientid;
+    window.location.href = "patient.html" + queryBuilder;
+}
+
 
 
