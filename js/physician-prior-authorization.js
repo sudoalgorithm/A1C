@@ -2,7 +2,7 @@ var querryString = decodeURIComponent(window.location.search);
 querryString = querryString.substring(1);
 var queries = querryString.split("&");
 
-window.onload = function(){
+document.body.onload = function(){
     getData(); 
     getPatientData();
     getData1(); 
