@@ -16,7 +16,7 @@ function onBoardPatientInsuranceCard(){
     var dateOfExpiry = "";
     var randomblahblahblah = makeid();
     var active = "Active";
-    var Inactive = "Inactive";
+    var inactive = "Inactive";
     var status = "";
     if(patientid === "123"){
         dateOfExpiry = date[0];
@@ -34,8 +34,8 @@ function onBoardPatientInsuranceCard(){
     }
     if(patientid === "345"){
         dateOfExpiry = date[2];
-        status = Inactive;
-        document.getElementById("insuranceStatus").innerHTML = Inactive;
+        status = inactive;
+        document.getElementById("insuranceStatus").innerHTML = inactive;
         document.getElementById("eligibilityrequestid").innerHTML = "IJKL"
         document.getElementById("dateofexpiry").innerHTML = date[2];
     }
@@ -55,11 +55,12 @@ function onBoardPatientInsuranceCard(){
     }
     if(patientid === "789"){
         dateOfExpiry = date[1];
-        status = Inactive;
-        document.getElementById("insuranceStatus").innerHTML = Inactive;
+        status = inactive;
+        document.getElementById("insuranceStatus").innerHTML = nactive;
         document.getElementById("eligibilityrequestid").innerHTML = "";
         document.getElementById("dateofexpiry").innerHTML = date[2];
     }
+    alert("Data Sent To Insurance Company"); 
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "http://localhost:3000/api/InsuranceCard",true);
     xhttp.setRequestHeader("Content-type","application/json");
@@ -87,7 +88,7 @@ function onBoardPatientInsuranceCard(){
                 "card": "resource:org.acme.health.InsuranceCard#"+patientid
             }
         ));
-    alert("Data Sent To Insurance Company"); 
+    
     }, 5000);
 }
 
