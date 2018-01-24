@@ -15,7 +15,6 @@ for(var i = 0; i < queries.length; i++){
 }
 
 window.onload = function(){
-    getData();
     getClinicalInformation();
     getClaimsInfromation();
 }

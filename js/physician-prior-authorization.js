@@ -14,9 +14,6 @@ for(var i = 0; i < queries.length; i++){
     document.getElementById("email").innerHTML = queries[7].replace("param7","");
 }
 
-window.onload = function(){
-    getData();
-}
 
 function getData(){
     var xhttp = new XMLHttpRequest();

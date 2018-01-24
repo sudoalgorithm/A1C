@@ -1,10 +1,3 @@
-window.onload = function(){
-    //getInsuranceCardInfromation();
-    //getClinicalInformation();
-    //getResponseInformation();
-    getData();
-}
-
 function getData(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/"+queries[0].replace("param1",""),false);
