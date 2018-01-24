@@ -346,7 +346,8 @@ function sendClinicalInformation(){
             "diagnosisCode": diagnosiscode,
             "diagnosisDescription": diagnosisdetail,
             "lengthOfStay": lengthofstay,
-            "requestedTreatmentAmount": treatmentamount
+            "requestedTreatmentAmount": treatmentamount,
+            "isApproved": true
         }));
     alert("Data Send To Insurance Company");    
 }
