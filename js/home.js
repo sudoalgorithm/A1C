@@ -60,7 +60,7 @@ function onBoardPatientInsuranceCard(){
         document.getElementById("eligibilityrequestid").innerHTML = "";
         document.getElementById("dateofexpiry").innerHTML = date[2];
     }
-    alert("Data Sent To Insurance Company"); 
+    alert("Notification sent to Insurance Company and Patient"); 
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "http://localhost:3000/api/InsuranceCard",true);
     xhttp.setRequestHeader("Content-type","application/json");
