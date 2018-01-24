@@ -188,7 +188,7 @@ function getSearch(){
             "patientContactNumber": document.getElementById("contactnumber").value,
             "patientEmailId": document.getElementById("email").value,
             "patientVisitType": "Inpatient",
-            "date": "July, 2018"
+            "dateOfExpiry": date[0]
             }
         ));
     
