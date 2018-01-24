@@ -24,7 +24,7 @@ function getData(){
     xhttp.send();    
 }
 
-function getData(){
+function getData1(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/234",false);
     xhttp.onreadystatechange = function() {
@@ -45,7 +45,7 @@ function getData(){
     xhttp.send();    
 }
 
-function getData(){
+function getData2(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/345",false);
     xhttp.onreadystatechange = function() {
@@ -66,7 +66,7 @@ function getData(){
     xhttp.send();    
 }
 
-function getData(){
+function getData3(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/456",false);
     xhttp.onreadystatechange = function() {
@@ -87,7 +87,7 @@ function getData(){
     xhttp.send();    
 }
 
-function getData(){
+function getData4(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/567",false);
     xhttp.onreadystatechange = function() {
@@ -108,7 +108,7 @@ function getData(){
     xhttp.send();    
 }
 
-function getData(){
+function getData5(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/678",false);
     xhttp.onreadystatechange = function() {
@@ -129,7 +129,7 @@ function getData(){
     xhttp.send();    
 }
 
-function getData(){
+function getData6(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/789",false);
     xhttp.onreadystatechange = function() {
@@ -154,7 +154,7 @@ function getData(){
 
 
 
-function getPatientData(){
+function getPatientData1(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/123",false);
     xhttp.onreadystatechange = function() {
@@ -176,7 +176,7 @@ function getPatientData(){
     xhttp.send();
 }
 
-function getPatientData(){
+function getPatientData2(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/234",false);
     xhttp.onreadystatechange = function() {
@@ -198,7 +198,7 @@ function getPatientData(){
     xhttp.send();
 }
 
-function getPatientData(){
+function getPatientData3(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/345",false);
     xhttp.onreadystatechange = function() {
@@ -219,7 +219,7 @@ function getPatientData(){
     };
     xhttp.send();
 }
-function getPatientData(){
+function getPatientData4(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/456",false);
     xhttp.onreadystatechange = function() {
@@ -240,7 +240,7 @@ function getPatientData(){
     };
     xhttp.send();
 }
-function getPatientData(){
+function getPatientData5(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/567",false);
     xhttp.onreadystatechange = function() {
@@ -261,7 +261,7 @@ function getPatientData(){
     };
     xhttp.send();
 }
-function getPatientData(){
+function getPatientData6(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/678",false);
     xhttp.onreadystatechange = function() {
@@ -283,7 +283,7 @@ function getPatientData(){
     xhttp.send();
 }
 
-function getPatientData(){
+function getPatientData7(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/789",false);
     xhttp.onreadystatechange = function() {
