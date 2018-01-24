@@ -17,8 +17,6 @@ document.body.onload = function(){
     getPatientData5();
     getData6(); 
     getPatientData6();
-    getData7(); 
-    getPatientData7();
 }
 
 function getData(){
@@ -42,6 +40,28 @@ function getData(){
     xhttp.send();    
 }
 
+function getPatientData(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/123",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            document.getElementById("age").innerHTML = obj.patientAge;
+            document.getElementById("sex").innerHTML = obj.patientGender;
+            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
+            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
+            document.getElementById("visittype").innerHTML = obj.patientVisitType;
+            document.getElementById("email").innerHTML = obj.patientEmailId;
+            getElementById = obj.patientId;
+            
+        }
+    };
+    xhttp.send();
+}
+
 function getData1(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/234",false);
@@ -63,6 +83,28 @@ function getData1(){
     xhttp.send();    
 }
 
+function getPatientData1(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/234",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            document.getElementById("age").innerHTML = obj.patientAge;
+            document.getElementById("sex").innerHTML = obj.patientGender;
+            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
+            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
+            document.getElementById("visittype").innerHTML = obj.patientVisitType;
+            document.getElementById("email").innerHTML = obj.patientEmailId;
+            getElementById = obj.patientId;
+            
+        }
+    };
+    xhttp.send();
+}
+
 function getData2(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/345",false);
@@ -82,6 +124,28 @@ function getData2(){
         }
     };
     xhttp.send();    
+}
+
+function getPatientData2(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/345",false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            document.getElementById("age").innerHTML = obj.patientAge;
+            document.getElementById("sex").innerHTML = obj.patientGender;
+            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
+            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
+            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
+            document.getElementById("visittype").innerHTML = obj.patientVisitType;
+            document.getElementById("email").innerHTML = obj.patientEmailId;
+            getElementById = obj.patientId;
+            
+        }
+    };
+    xhttp.send();
 }
 
 function getData3(){
@@ -172,72 +236,12 @@ function getData6(){
 
 
 
-function getPatientData1(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/123",false);
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            document.getElementById("patientid").innerHTML = obj.patientId;
-            document.getElementById("patientname").innerHTML = obj.patientFirstName;
-            document.getElementById("age").innerHTML = obj.patientAge;
-            document.getElementById("sex").innerHTML = obj.patientGender;
-            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
-            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
-            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
-            document.getElementById("visittype").innerHTML = obj.patientVisitType;
-            document.getElementById("email").innerHTML = obj.patientEmailId;
-            getElementById = obj.patientId;
-            
-        }
-    };
-    xhttp.send();
-}
 
-function getPatientData2(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/234",false);
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            document.getElementById("patientid").innerHTML = obj.patientId;
-            document.getElementById("patientname").innerHTML = obj.patientFirstName;
-            document.getElementById("age").innerHTML = obj.patientAge;
-            document.getElementById("sex").innerHTML = obj.patientGender;
-            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
-            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
-            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
-            document.getElementById("visittype").innerHTML = obj.patientVisitType;
-            document.getElementById("email").innerHTML = obj.patientEmailId;
-            getElementById = obj.patientId;
-            
-        }
-    };
-    xhttp.send();
-}
+
+
+
 
 function getPatientData3(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/345",false);
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            document.getElementById("patientid").innerHTML = obj.patientId;
-            document.getElementById("patientname").innerHTML = obj.patientFirstName;
-            document.getElementById("age").innerHTML = obj.patientAge;
-            document.getElementById("sex").innerHTML = obj.patientGender;
-            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
-            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
-            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
-            document.getElementById("visittype").innerHTML = obj.patientVisitType;
-            document.getElementById("email").innerHTML = obj.patientEmailId;
-            getElementById = obj.patientId;
-            
-        }
-    };
-    xhttp.send();
-}
-function getPatientData4(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/456",false);
     xhttp.onreadystatechange = function() {
@@ -258,7 +262,7 @@ function getPatientData4(){
     };
     xhttp.send();
 }
-function getPatientData5(){
+function getPatientData4(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/567",false);
     xhttp.onreadystatechange = function() {
@@ -279,7 +283,7 @@ function getPatientData5(){
     };
     xhttp.send();
 }
-function getPatientData6(){
+function getPatientData5(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/678",false);
     xhttp.onreadystatechange = function() {
@@ -301,7 +305,7 @@ function getPatientData6(){
     xhttp.send();
 }
 
-function getPatientData7(){
+function getPatientData6(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/789",false);
     xhttp.onreadystatechange = function() {
