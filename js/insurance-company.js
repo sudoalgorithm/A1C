@@ -23,6 +23,27 @@ function getData(){
     xhttp.send();
 }
 
+function getPatientData(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/"+queries[0].replace("param1",""),false);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById("patientid").innerHTML = obj.patientId;
+            document.getElementById("patientname").innerHTML = obj.patientFirstName;
+            document.getElementById("age").value = obj.patientAge;
+            document.getElementById("sex").value = obj.patientGender;
+            document.getElementById("emiratesid").value = obj.patientEmiratesId;
+            document.getElementById("insuranceid").value = obj.patientInsuranceId;
+            document.getElementById("contactnumber").value = obj.patientContactNumber;
+            document.getElementById("visittype").value = obj.patientVisitType;
+            document.getElementById("email").value = obj.patientEmailId;
+            
+        }
+    };
+    xhttp.send();
+}
+
 function sendData(){
     var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
     var xhttp = new XMLHttpRequest();
