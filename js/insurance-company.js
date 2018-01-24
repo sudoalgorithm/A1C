@@ -5,28 +5,30 @@ var queries = querryString.split("&");
 document.body.onload = function(){
     getData(); 
     getPatientData();
+    getClaimsInfromation();
     getData1(); 
     getPatientData1();
+    getClinicalInformation1();
     getData2(); 
     getPatientData2();
+    getClinicalInformation2();
     getData3(); 
     getPatientData3();
+    getClinicalInformation3();
     getData4(); 
     getPatientData4();
+    getClinicalInformation4();
     getData5(); 
     getPatientData5();
+    getClinicalInformation5();
     getData6(); 
     getPatientData6();
+    getClinicalInformation6();
     getData7(); 
     getPatientData7();
-    getClinicalInformation(); 
-    getClinicalInformation1();
-    getClinicalInformation2();
-    getClinicalInformation3();
-    getClinicalInformation4();
-    getClinicalInformation5();
-    getClinicalInformation6();
     getClinicalInformation7();
+    
+    
 }
 
 function getData(){
