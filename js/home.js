@@ -203,20 +203,20 @@ function sendDataPA(){
 
 function sendDataIC(){
     var patientid = document.getElementById("patientid").value;
-    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
+    queryBuilder = "?param1" + patientid;
     window.location.href = "insurance-company.html" + queryBuilder;
 }
 
 function sendDataHCT(){
     
     var patientid = document.getElementById("patientid").value;
-    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
+    queryBuilder = "?param1" + patientid;
     window.location.href = "hospital-claims-teams.html" + queryBuilder;
 }
 
 function sendDataP(){
     var patientid = document.getElementById("patientid").value;
-    queryBuilder = "?param1" + patientid + "&param2" + paitentname + "&param3" + age + "&param4" + sex + "&param5" + emiratesid + "&param6" + insuranceid + "&param6" + contactnumber + "&param7" + email;
+    queryBuilder = "?param1" + patientid;
     window.location.href = "patient.html" + queryBuilder;
 }
 

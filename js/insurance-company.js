@@ -137,7 +137,7 @@ function sendDataPA(){
 function sendDataHome(){
     var patientid = document.getElementById("patientid").value;
     queryBuilder = "?param1" + patientid;
-    window.location.href = "insurance-company.html" + queryBuilder;
+    window.location.href = "home.html" + queryBuilder;
 }
 
 function sendDataHCT(){
