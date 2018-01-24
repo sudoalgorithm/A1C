@@ -58,7 +58,7 @@ function sendClinicalInformation(){
     var lengthofstay = document.getElementById("lengthofstay").value;
     var treatmentamount = document.getElementById("treatmentamount").value;
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "http://localhost:3000/api/ClinicalAsset/123", true);
+    xhttp.open("POST", "http://localhost:3000/api/ClinicalAsset", true);
     xhttp.setRequestHeader("Content-type","application/json");
     xhttp.send(JSON.stringify({
         "$class": "org.acme.health.IssuePriorAuthorization",
