@@ -29,7 +29,7 @@ function getData(){
             document.getElementById("insuranceStatus").innerHTML = obj.insuranceResponseId;
             document.getElementById("date").innerHTML = obj.dateOfExpiry;
             console.log(obj.isActive);
-            if(obj.isActive === true){
+            if(obj.isActive === "Active"){
                 document.getElementById("insuranceResponse").innerHTML = "Active"
             }else{
                 document.getElementById("insuranceResponse").innerHTML = "In Active"
