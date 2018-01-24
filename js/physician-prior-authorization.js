@@ -351,7 +351,7 @@ function getResponse1(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/234",false);
     xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.var Approved = true;status == 200) {
+        if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
             if(obj.isApproved === Approved){
                 document.getElementById("requeststatus").innerHTML = "Approved.";
