@@ -311,7 +311,7 @@ function getClinicalInformation5(){
 }
 
 function getAmount(){
-    var Approved = false;
+    console.log("getAmount is working");
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/123", false);
     xhttp.onreadystatechange = function() {
@@ -327,7 +327,6 @@ function getAmount(){
 }
 
 function getAmount1(){
-    var Approved = false;
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/234", false);
     xhttp.onreadystatechange = function() {
@@ -345,16 +344,13 @@ function getAmount1(){
 
 function getAmount2(){
     var Approved = false;
-    var xhttp = new XMLHttpRequest();
+    var xhttp = new XMLHttpRequest()
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/345", false);
     xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         var obj = JSON.parse(this.responseText);
-                        if(obj.isApproved === Approved){
-                            document.getElementById("requeststatus").innerHTML = "Approved.";
-                        }else{
-                            document.getElementById("requeststatus").innerHTML = "Reject.";
-                        }
+                        document.getElementById("requestedtreatmentamount").innerHTML = obj.requestedTreatmentAmount;
+                        document.getElementById("finalamount").innerHTML = obj.requestedTreatmentAmount;
 
                     }
                 
