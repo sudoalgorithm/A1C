@@ -153,14 +153,14 @@ function autoFile(){
     
 }
 
-function sendDataHome(){
+function sendDataIC(){
     queryBuilder = "?param1" + 123; 
-    window.location.href = "home.html" + queryBuilder;
+    window.location.href = "insurance-company.html" + queryBuilder;
 }
 
-function sendDataIC(){
+function sendDataHome(){
     queryBuilder = "?param1" + 123;
-    window.location.href = "insurance-company.html" + queryBuilder;
+    window.location.href = "home.html" + queryBuilder;
 }
 
 function sendDataHCT(){
