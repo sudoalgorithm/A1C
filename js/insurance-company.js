@@ -38,6 +38,8 @@ function getPatientData(){
             document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
             document.getElementById("visittype").innerHTML = obj.patientVisitType;
             document.getElementById("email").innerHTML = obj.patientEmailId;
+            document.getElementById("patientnameci").innerHTML = obj.patientFirstName;
+            document.getElementById("insuranceidci").innerHTML = obj.patientInsuranceId;
             
         }
     };
