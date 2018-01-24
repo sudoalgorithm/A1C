@@ -23,18 +23,19 @@ function getData(){
             var obj = JSON.parse(this.responseText);
             document.getElementById("patientnameicf").innerHTML = obj.patientFirstName;
             document.getElementById("insuranceidicf").innerHTML = obj.patientInsuranceId;
-            document.getElementById("insuranceStatus").innerHTML = obj.insuranceResponseId;
-            document.getElementById("date").innerHTML = obj.dateOfExpiry;
+            document.getElementById("insuranceResponse").value = obj.insuranceResponseId;
+            document.getElementById("date").value = obj.dateOfExpiry;
             console.log(obj.isActive);
             if(obj.isActive === "Active"){
-                document.getElementById("insuranceResponse").innerHTML = "Active"
+                document.getElementById("insuranceStatus").value = "Active"
             }else{
-                document.getElementById("insuranceResponse").innerHTML = "In Active"
+                document.getElementById("insuranceStatus").value = "In Active"
             }
         }
     };
-    xhttp.send();    
+    xhttp.send();
 }
+
 
 function sendClinicalInformation(){
     var hospitalid = document.getElementById("hospitalid").value;
