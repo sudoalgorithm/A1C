@@ -10,17 +10,17 @@ function getData(){
             var obj = JSON.parse(this.responseText);
             document.getElementById("patientnameicf").innerHTML = obj.patientFirstName;
             document.getElementById("insuranceidicf").innerHTML = obj.patientInsuranceId;
-            document.getElementById("insuranceResponse").value = obj.insuranceResponseId;
-            document.getElementById("date").value = obj.dateOfExpiry;
+            document.getElementById("insuranceStatus").innerHTML = obj.insuranceResponseId;
+            document.getElementById("date").innerHTML = obj.dateOfExpiry;
             console.log(obj.isActive);
-            if(obj.isActive === "Active"){
-                document.getElementById("insuranceStatus").value = "Active"
+            if(obj.isActive === true){
+                document.getElementById("insuranceResponse").innerHTML = "Active"
             }else{
-                document.getElementById("insuranceStatus").value = "In Active"
+                document.getElementById("insuranceResponse").innerHTML = "In Active"
             }
         }
     };
-    xhttp.send();
+    xhttp.send();    
 }
 
 function getPatientData(){
