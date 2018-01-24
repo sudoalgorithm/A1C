@@ -5,7 +5,7 @@ var queries = querryString.split("&");
 document.body.onload = function(){
     getData(); 
     getPatientData();
-    getClaimsInfromation();
+    getClinicalInformation();
     getData1(); 
     getPatientData1();
     getClinicalInformation1();
@@ -363,7 +363,7 @@ function sendData(){
     alert("Please Data Sent To Prior Authorization"); 
 }
 
-function getClaimsInfromation(){
+function getClinicalInformation(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ123", false);
     xhttp.onreadystatechange = function() {
