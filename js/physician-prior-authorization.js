@@ -154,22 +154,22 @@ function autoFile(){
 }
 
 function sendDataHome(){
-    queryBuilder = "?param1" + getElementById; 
+    queryBuilder = "?param1" + 123; 
     window.location.href = "home.html" + queryBuilder;
 }
 
 function sendDataIC(){
-    queryBuilder = "?param1" + getElementById;
+    queryBuilder = "?param1" + 123;
     window.location.href = "insurance-company.html" + queryBuilder;
 }
 
 function sendDataHCT(){
-    queryBuilder = "?param1" + getElementById;
+    queryBuilder = "?param1" + 123;
     window.location.href = "hospital-claims-teams.html" + queryBuilder;
 }
 
 function sendDataP(){
-    queryBuilder = "?param1" + getElementById;
+    queryBuilder = "?param1" + 123;
     window.location.href = "patient.html" + queryBuilder;
 }
 
