@@ -362,11 +362,12 @@ function sendData(){
     alert("Please Data Sent To Prior Authorization"); 
 }
 
-function getClinicalInformation(){
+function getClinicalInformation1(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAsset/ZZ123", false);
     xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
                         document.getElementById("hospitalid").innerHTML = obj[0].hospitalId;
                         document.getElementById("hospitalname").innerHTML = obj[0].hospitalName;
                         document.getElementById("physicianname").innerHTML = obj[0].physicianId;
