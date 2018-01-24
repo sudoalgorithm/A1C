@@ -139,7 +139,7 @@ function getSearch(){
         document.getElementById("insuranceid").value = "AA-001-950"
         document.getElementById("contactnumber").value = document.getElementById("insuranceStatus").innerHTML = "";
         document.getElementById("eligibilityrequestid").innerHTML = "";
-        document.getElementById("dateofexpiry").innerHTML = "";"971765432632";
+        document.getElementById("dateofexpiry").innerHTML = "971765432632";
         document.getElementById("email").value = "hanifa.shaheen@test.com"
         document.getElementById("patientnameicf").innerHTML = "Hanifa Shaheen";
         document.getElementById("insuranceidicf").innerHTML = "AA-001-950"
