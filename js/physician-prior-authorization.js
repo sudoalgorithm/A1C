@@ -2,6 +2,25 @@ var querryString = decodeURIComponent(window.location.search);
 querryString = querryString.substring(1);
 var queries = querryString.split("&");
 
+window.onload = function(){
+    getData(); 
+    getPatientData();
+    getData1(); 
+    getPatientData1();
+    getData2(); 
+    getPatientData2();
+    getData3(); 
+    getPatientData3();
+    getData4(); 
+    getPatientData4();
+    getData5(); 
+    getPatientData5();
+    getData6(); 
+    getPatientData6();
+    getData7(); 
+    getPatientData7();
+}
+
 function getData(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/123",false);
