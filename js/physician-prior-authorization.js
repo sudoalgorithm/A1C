@@ -219,27 +219,6 @@ function getData5(){
     xhttp.send();    
 }
 
-function getData6(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/InsuranceCard/789",false);
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            document.getElementById("patientnameicf").innerHTML = obj.patientFirstName;
-            document.getElementById("insuranceidicf").innerHTML = obj.patientInsuranceId;
-            document.getElementById("insuranceStatus").innerHTML = obj.insuranceResponseId;
-            document.getElementById("date").innerHTML = obj.dateOfExpiry;
-            console.log(obj.isActive);
-            if(obj.isActive === true){
-                document.getElementById("insuranceResponse").innerHTML = "Active"
-            }else{
-                document.getElementById("insuranceResponse").innerHTML = "In Active"
-            }
-        }
-    };
-    xhttp.send();    
-}
-
 function getPatientData3(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/PatientRecord/456",false);
@@ -304,27 +283,6 @@ function getPatientData5(){
     xhttp.send();
 }
 
-function getPatientData6(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/PatientRecord/789",false);
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            document.getElementById("patientid").innerHTML = obj.patientId;
-            document.getElementById("patientname").innerHTML = obj.patientFirstName;
-            document.getElementById("age").innerHTML = obj.patientAge;
-            document.getElementById("sex").innerHTML = obj.patientGender;
-            document.getElementById("emiratesid").innerHTML = obj.patientEmiratesId;
-            document.getElementById("insuranceid").innerHTML = obj.patientInsuranceId;
-            document.getElementById("contactnumber").innerHTML = obj.patientContactNumber;
-            document.getElementById("visittype").innerHTML = obj.patientVisitType;
-            document.getElementById("email").innerHTML = obj.patientEmailId;
-            getElementById = obj.patientId;
-            
-        }
-    };
-    xhttp.send();
-}
 
 function getResponse(){
     var Approved = true;
@@ -445,27 +403,6 @@ function getResponse5(){
     };
     xhttp.send();
 }
-
-function getResponse6(){
-    var Approved = true;
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/789",false);
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            if(obj.isApproved === Approved){
-                document.getElementById("requeststatus").innerHTML = "Approved.";
-                document.getElementById("reason").innerHTML = "Send detailed clinical info along with the claims.";
-            }else{
-                document.getElementById("requeststatus").innerHTML = "Reject.";
-                document.getElementById("reason").innerHTML = "This treatment is not covered by insured policy.";
-            }
-            
-        }
-    };
-    xhttp.send();
-}
-
 function sendClinicalInformation(){
     var hospitalid = document.getElementById("hospitalid").value;
     var hospitalname = document.getElementById("hospitalname").value;
