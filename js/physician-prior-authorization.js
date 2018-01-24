@@ -321,7 +321,7 @@ function getResponse1(){
 }
 
 function getResponse2(){
-    var Approved = false;
+    var Approved = true;
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/345",false);
     xhttp.onreadystatechange = function() {
