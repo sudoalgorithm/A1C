@@ -69,7 +69,7 @@ function sendClinicalInformation(){
 
 function autoFile(){
     if(document.getElementById("hospitalid").value === "ZZ123"){
-        document.getElementById("hospitalname").value = "Test Hospital";
+        document.getElementById("hospitalname").value = "Kuwait Hospital";
         document.getElementById("patientnamecf").value = "Aisha Mohammed";
         document.getElementById("insuranceidcf").value = "AA-001-900";
         document.getElementById("physicianname").value = "Dr Hananah";
@@ -81,7 +81,7 @@ function autoFile(){
         document.getElementById("treatmentamount").value = "25000";
     }
     if(document.getElementById("hospitalid").value === "ZZ124"){
-        document.getElementById("hospitalname").value = "Block Chain Hospital";
+        document.getElementById("hospitalname").value = "Saqar Hospital";
         document.getElementById("patientnamecf").value = "Aamina Ali";
         document.getElementById("insuranceidcf").value = "BB-007-600";
         document.getElementById("physicianname").value = "Dr Alex";
@@ -93,7 +93,7 @@ function autoFile(){
         document.getElementById("treatmentamount").value = "30000";
     }
     if(document.getElementById("hospitalid").value === "ZZ125"){
-        document.getElementById("hospitalname").value = "Healthy Hospital";
+        document.getElementById("hospitalname").value = "Al Fujairah Hospital";
         document.getElementById("patientname").value = "AbdulRazzak Ahmed";
         document.getElementById("insuranceid").value = "CC-002-400";
         document.getElementById("physicianname").value = "Dr Kunal";
@@ -105,7 +105,7 @@ function autoFile(){
         document.getElementById("treatmentamount").value = "15000";
     }
     if(document.getElementById("hospitalid").value === "ZZ126"){
-        document.getElementById("hospitalname").value = "Multy Hospital";
+        document.getElementById("hospitalname").value = "Umm Al Quwain Hospital";
         document.getElementById("patientname").value = "Hanifa Shaheen";
         document.getElementById("insuranceid").value = "AA-001-950";
         document.getElementById("physicianname").value = "Dr Hananah";
@@ -117,7 +117,7 @@ function autoFile(){
         document.getElementById("treatmentamount").value = "25000";
     }
     if(document.getElementById("hospitalid").value === "ZZ127"){
-        document.getElementById("hospitalname").value = "Caring Hospital";
+        document.getElementById("hospitalname").value = "Kalba Hospital";
         document.getElementById("patientname").value = "Hakeem Hassan";
         document.getElementById("insuranceid").value = "BB-007-650";
         document.getElementById("physicianname").value = "Dr Alex";
@@ -129,7 +129,7 @@ function autoFile(){
         document.getElementById("treatmentamount").value = "30000";
     }
     if(document.getElementById("hospitalid").value === "ZZ128"){
-        document.getElementById("hospitalname").value = "Welfare Hospital";
+        document.getElementById("hospitalname").value = "Dibba Hospital";
         document.getElementById("patientname").value = "Hesham Osama";
         document.getElementById("insuranceid").value = "CC-002-450";
         document.getElementById("physicianname").value = "Dr Kunal";
