@@ -321,7 +321,7 @@ function getResponse1(){
 }
 
 function getResponse2(){
-    var Approved = true;
+    var Approved = false;
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "http://localhost:3000/api/ClinicalAssetResponse/345",false);
     xhttp.onreadystatechange = function() {
@@ -425,7 +425,7 @@ function sendClinicalInformation(){
             "requestedTreatmentAmount": treatmentamount,
             "isApproved": true
         }));
-    alert("Data Send To Insurance Company");    
+    alert("Data Send To Insurance Company And Patient");    
 }
 
 function autoFile(){

@@ -77,7 +77,7 @@ function sendClaimsInfromation(){
                 "amount": document.getElementById("amount").value
             }
             }));
-    alert("Send Data To Insurance Company");        
+    alert("Send Data To Insurance Company And Patient");        
 }
 
 function getClinicalInformation(){
