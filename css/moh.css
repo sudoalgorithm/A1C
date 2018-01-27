@@ -74,4 +74,16 @@ h5 span{
     float: left;
 }
 
+.hr-override{
+    margin: 0px;
+}
+
+.h4-override{
+    margin: 0px;
+}
+
+.btn-dropdown-override{
+    height: 3.5rem !important;
+}
+
 
