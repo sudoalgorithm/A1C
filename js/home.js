@@ -44,21 +44,21 @@ function onBoardPatientInsuranceCard(){
         dateOfExpiry = date[0];
         status = active;
         document.getElementById("insuranceStatus").innerHTML = active;
-        document.getElementById("eligibilityrequestid").innerHTML = "";
+        document.getElementById("eligibilityrequestid").innerHTML = "MNOP";
         document.getElementById("dateofexpiry").innerHTML = date[0];
     }
     if(patientid === "678"){
         dateOfExpiry = date[1];
         status = active;
         document.getElementById("insuranceStatus").innerHTML = active;
-        document.getElementById("eligibilityrequestid").innerHTML = "";
+        document.getElementById("eligibilityrequestid").innerHTML = "QRST";
         document.getElementById("dateofexpiry").innerHTML = date[1];
     }
     if(patientid === "789"){
         dateOfExpiry = date[1];
         status = inactive;
         document.getElementById("insuranceStatus").innerHTML = nactive;
-        document.getElementById("eligibilityrequestid").innerHTML = "";
+        document.getElementById("eligibilityrequestid").innerHTML = "UVWX";
         document.getElementById("dateofexpiry").innerHTML = date[2];
     }
     alert("Notification sent to Insurance Company and Patient"); 
@@ -104,7 +104,7 @@ function getSearch(){
         document.getElementById("contactnumber").value = "971765432612";
         document.getElementById("email").value = "aishamohammed@test.com"
         document.getElementById("patientnameicf").innerHTML = "Aisha Mohammed";
-        document.getElementById("insuranceidicf").innerHTML = "AA-001-900"
+        document.getElementById("insuranceidicf").innerHTML = "AA-001-900";
         
     }
     if(document.getElementById("patientid").value === "234"){
@@ -112,11 +112,11 @@ function getSearch(){
         document.getElementById("age").value = "57";
         document.getElementById("sex").value = "Female";
         document.getElementById("emiratesid").value = "784-1964-123456-3";
-        document.getElementById("insuranceid").value = "BB-007-600"
+        document.getElementById("insuranceid").value = "BB-007-600";
         document.getElementById("contactnumber").value = "971765432619";
         document.getElementById("email").value = "aamina.ali@test.com"
         document.getElementById("patientnameicf").innerHTML = "Aamina Ali";
-        document.getElementById("insuranceidicf").innerHTML = "BB-007-600"
+        document.getElementById("insuranceidicf").innerHTML = "BB-007-600";
         
     }
     if(document.getElementById("patientid").value === "345"){
@@ -126,9 +126,9 @@ function getSearch(){
         document.getElementById("emiratesid").value = "784-1980-123456-4";
         document.getElementById("insuranceid").value = "CC-002-400"
         document.getElementById("contactnumber").value = "971765432676";
-        document.getElementById("email").value = "aahmed@test.com"
+        document.getElementById("email").value = "aahmed@test.com";
         document.getElementById("patientnameicf").innerHTML = "AbdulRazzak Ahmed";
-        document.getElementById("insuranceidicf").innerHTML = "CC-002-400"
+        document.getElementById("insuranceidicf").innerHTML = "CC-002-400";
         
     }
     if(document.getElementById("patientid").value === "456"){
@@ -137,12 +137,10 @@ function getSearch(){
         document.getElementById("sex").value = "Female";
         document.getElementById("emiratesid").value = "764-1974-123456-2";
         document.getElementById("insuranceid").value = "AA-001-950"
-        document.getElementById("contactnumber").value = document.getElementById("insuranceStatus").innerHTML = "";
-        document.getElementById("eligibilityrequestid").innerHTML = "";
-        document.getElementById("dateofexpiry").innerHTML = "971765432632";
+        document.getElementById("contactnumber").value = "971765432632";
         document.getElementById("email").value = "hanifa.shaheen@test.com"
         document.getElementById("patientnameicf").innerHTML = "Hanifa Shaheen";
-        document.getElementById("insuranceidicf").innerHTML = "AA-001-950"
+        document.getElementById("insuranceidicf").innerHTML = "AA-001-950";
         
     }
     if(document.getElementById("patientid").value === "678"){
@@ -154,7 +152,7 @@ function getSearch(){
         document.getElementById("contactnumber").value = "971765432609";
         document.getElementById("email").value = "hakeem.hassan@test.com"
         document.getElementById("patientnameicf").innerHTML = "Hakeem Hassan";
-        document.getElementById("insuranceidicf").innerHTML = "BB-007-650"
+        document.getElementById("insuranceidicf").innerHTML = "BB-007-650";
         
        
     }
@@ -163,11 +161,11 @@ function getSearch(){
         document.getElementById("age").value = "27";
         document.getElementById("sex").value = "Male";
         document.getElementById("emiratesid").value = "794-1990-123456-4";
-        document.getElementById("insuranceid").value = "CC-002-450"
+        document.getElementById("insuranceid").value = "CC-002-450";
         document.getElementById("contactnumber").value = "971765432614";
         document.getElementById("email").value = "hesham.osama@test.com"
         document.getElementById("patientnameicf").innerHTML = "Hesham Osama";
-        document.getElementById("insuranceidicf").innerHTML = "CC-002-450"
+        document.getElementById("insuranceidicf").innerHTML = "CC-002-450";
         
     }
 
@@ -272,7 +270,7 @@ function deleteDataPR1(){
 
 function deleteDataCA1(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ234",true);
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ124",true);
     xhttp.onload = function () {
         var users = JSON.parse(xhr.responseText);
         if (xhr.readyState == 4 && xhr.status == "200") {
@@ -317,7 +315,7 @@ function deleteDataPR2(){
 
 function deleteDataCA2(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ345",true);
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ125",true);
     xhttp.onload = function () {
         var users = JSON.parse(xhr.responseText);
         if (xhr.readyState == 4 && xhr.status == "200") {
@@ -362,7 +360,7 @@ function deleteDataPR3(){
 
 function deleteDataCA3(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ456",true);
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ126",true);
     xhttp.onload = function () {
         var users = JSON.parse(xhr.responseText);
         if (xhr.readyState == 4 && xhr.status == "200") {
@@ -407,7 +405,7 @@ function deleteDataPR4(){
 
 function deleteDataCA4(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ567",true);
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ127",true);
     xhttp.onload = function () {
         var users = JSON.parse(xhr.responseText);
         if (xhr.readyState == 4 && xhr.status == "200") {
