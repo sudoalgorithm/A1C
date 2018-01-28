@@ -450,7 +450,7 @@ function deleteDataPR5(){
 
 function deleteDataCA5(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ678",true);
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ128",true);
     xhttp.onload = function () {
         var users = JSON.parse(xhr.responseText);
         if (xhr.readyState == 4 && xhr.status == "200") {
@@ -495,7 +495,7 @@ function deleteDataPR6(){
 
 function deleteDataCA6(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ789",true);
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ129",true);
     xhttp.onload = function () {
         var users = JSON.parse(xhr.responseText);
         if (xhr.readyState == 4 && xhr.status == "200") {
