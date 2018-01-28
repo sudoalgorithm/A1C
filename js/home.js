@@ -195,6 +195,51 @@ function getSearch(){
     }, 3000);
 }
 
+function deleteDataIC(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/InsuranceCard/123",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataPR(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/PatientRecord/123",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataCA(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/123",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
 function sendDataPA(){
     var patientid = document.getElementById("patientid").value;
     queryBuilder = "?param1" + patientid; 
