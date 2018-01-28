@@ -240,6 +240,278 @@ function deleteDataCA(){
 
 }
 
+function deleteDataIC1(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/InsuranceCard/234",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataPR1(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/PatientRecord/234",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataCA1(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ234",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataIC2(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/InsuranceCard/345",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataPR2(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/PatientRecord/345",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataCA2(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ345",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataIC3(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/InsuranceCard/456",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataPR3(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/PatientRecord/456",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataCA3(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ456",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataIC4(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/InsuranceCard/567",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataPR4(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/PatientRecord/567",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataCA4(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ567",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataIC5(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/InsuranceCard/678",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataPR5(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/PatientRecord/678",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataCA5(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ678",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataIC6(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/InsuranceCard/789",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataPR6(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/PatientRecord/789",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+function deleteDataCA6(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ789",true);
+    xhttp.onload = function () {
+        var users = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(users);
+        } else {
+            console.error(users);
+        }
+    }
+    xhttp.send(null);
+
+}
+
+
+
 function sendDataPA(){
     var patientid = document.getElementById("patientid").value;
     queryBuilder = "?param1" + patientid; 
