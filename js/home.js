@@ -227,7 +227,7 @@ function deleteDataPR(){
 
 function deleteDataCA(){
     var xhttp = new XMLHttpRequest();
-    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/123",true);
+    xhttp.open("DELETE", "http://localhost:3000/api/ClinicalAsset/ZZ123",true);
     xhttp.onload = function () {
         var users = JSON.parse(xhr.responseText);
         if (xhr.readyState == 4 && xhr.status == "200") {
